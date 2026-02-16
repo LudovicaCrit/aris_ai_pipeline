@@ -1,0 +1,292 @@
+convert /mnt/user-data/uploads/2_3_3_23_RE_Gestione_Reticenze_Malattia.doc as a Writer document -> /tmp/tmpnkio70ay/2_3_3_23_RE_Gestione_Reticenze_Malattia.txt using filter : Text
+﻿Flusso di processo
+
+2.3.3.23 RE Gestione Reticenze Malattia
+Macroprocesso
+
+2 PROCESSI DI BUSINESS
+Processo
+
+2.3 Gestione PTF
+Sottoprocesso
+
+2.3.3 Gestione prodotti Danni Reale Mutua
+Periodicità di esecuzione
+
+Ad evento
+Owner
+
+CONSULENZA  RETAIL - Responsabile
+App senza presidio IT
+
+
+Recovery Point Objective
+
+Fascia 0
+Recovery Time Objective
+
+
+
+
+
+Data ultimo aggiornamento
+
+Feb 12, 2025, 3:38:36 PM
+
+Svolto per Reale Mutua
+Si
+
+Svolto per Italiana
+No
+
+Svolto per Blue Assistance
+No
+
+Svolto per Banca Reale
+No
+
+Svolto per Reale Immobili
+No
+
+Svolto per Reale Seguros
+No
+
+Svolto per Reale Vida
+No
+
+Svolto per ITES
+No
+
+Svolto per Compagnia Extragruppo
+No
+
+Svolto per Reale Chile
+No
+
+Svolto per Reale Foundation
+No
+
+Svolto per BHC
+No
+
+Svolto per Reale International
+No
+
+Svolto per Reale Ites Esp
+No
+
+Svolto per Italnext
+No
+
+Svolto per Ydrogios
+No
+
+Svolto per Reale Immobili Esp
+No
+
+
+
+
+
+Dati trattati
+
+
+Riservatezza
+
+3
+Integrità
+
+2
+Disponibilità
+
+2
+Affidabilità
+
+3
+Privacy
+
+PERSONALI SENSIBILI
+
+
+Codice
+Attività
+Attività
+Codice
+Controllo
+Controllo
+010
+TITOLO
+Analisi richiesta rimborso sinistro polizza malattia
+DESCRIZIONE
+L'operatore, ricevuta la richiesta di rimborso da parte dell'assicurato, effettua un'analisi al fine di determinare se in fase di emissione della polizza, vi sia stata una reticenza.
+Questo fenomeno si manifesta nel momento in cui sia accertata un'incongruenza tra quanto dichiarato dall'assicurato all'atto della sottoscrizione della polizza e quanto dichiarato in fase di ricovero in struttura ospedaliera. 
+In tal caso, la normativa e il contratto consentono il rifiuto della liquidazione del sinistro (qualora fosse accertata la reticenza) e permettono una modifica delle condizioni di polizza (riduzione della percentuale di copertura del sinistro) in accordo con il cliente.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+BLUE ASSISTANCE
+APPLICATIVO INFORMATICO
+-
+
+020
+TITOLO
+Verificare che non ci sia stata reticenza in fase di emissione della polizza
+DESCRIZIONE
+L'operatore richiede all'assicurato o all'agenzia/gerenza la cartella clinica relativa al sinistro denunciato e procede a verificare se vi sia stata reticenza. In particolare l'operatore consulta (tramite applicativo) il questionario anamnestico compilato dall'aderente in fase di emissione e confronta le risposte con le dichiarazioni fornite in fase di ricovero presso la struttura ospedaliera contenute nella documentazione medica ricevuta. Nel caso in cui non siano evidenziate differenze, l'operatore procede alle attività di liquidazione del sinistro.
+In fase di analisi della documentazione, l'operatore può richiedere il parere di un consulente medico.
+GESTIONE ANOMALIA
+Nel caso in cui l'operatore evidenzi un'incongruenza tra quanto dichiarato dall'aderente in fase di compilazione del questionario anamnestico e quanto dichiarato in fase di ricovero, viene segnalata la reticenza tramite mail all'area di assunzione infortuni/malattia. 
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+BLUE ASSISTANCE
+APPLICATIVO INFORMATICO
+BLUEOTTICO
+PASS
+CLINIPASS
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+030
+TITOLO
+Analisi della segnalazione di reticenza su polizze malattie
+DESCRIZIONE
+L'operatore riceve tramite mail la segnalazione di reticenza da parte di Blue Assistance e, se necessario, contatta tramite mail l'agenzia/gerenza o aprendo un ticket sull'applicativo Isaac al fine di richiedere all'assicurato ulteriore documentazione medica per poter avere un quadro clinico più completo e accertare se la malattia è insorta in una fase successiva alla stipula del contratto.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+TEAM ANTIFRODE SANITARIA - Ufficio
+APPLICATIVO INFORMATICO
+ISAAC
+
+
+
+040
+TITOLO
+Raccolta e invio documentazione medica a sede
+DESCRIZIONE
+L'agente/gerente (talvolta attraverso l'intermediazione del broker), ricevuta la richiesta da sede, contatta il cliente e richiede la documentazione sanitaria collegata al sinistro (esami, descrizione delle attività terapeutiche praticate). La tipologia di documenti richiesti, varia a seconda della natura dell'evento sinistroso. Successivamente, l'agente/gerente predispone l'invio del materiale a sede.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+RETE DI VENDITA
+APPLICATIVO INFORMATICO
+ISAAC
+
+
+
+050
+TITOLO
+Analisi della documentazione medica relativa alla reticenza
+DESCRIZIONE
+L'operatore analizza la documentazione sanitaria, con l'eventuale supporto del consulente medico, al fine di determinare l'effettiva sussistenza della reticenza e definire le modifiche delle condizioni di polizza.
+Inoltre, l'operatore riepiloga l'analisi della reticenza, il parere del consulente medico e le modifiche che verranno effettuate al contratto (regolamentazione sanitaria, annullamento). Questa analisi viene condivisa con il responsabile.
+Tutta la documentazione viene salvata in automatico su apposito applicativo. In caso di invio della documentazione tramite mail l'addetto si occupa di registrare tutta la documentazione sull'applicativo per la gestione delle Richieste di Autorizzazioni Assuntive. "
+ALTRO STRUMENTO
+Documento Word
+ESECUTORE
+NUCLEO VALUTAZIONE MEDICA - Ufficio
+APPLICATIVO INFORMATICO
+GRA Gestione Richieste Autorizzazione Assuntive
+ISAAC
+
+060
+TITOLO
+Validare l'azione di riforma intrapresa
+DESCRIZIONE
+Il responsabile esamina l'azione di riforma che si intende intraprendere nei confronti dell'assicurato (variazione della percentuale di copertura).
+Nel caso in cui il responsabile ritenga giustificata tale decisione, autorizza l'operatore all'invio del ticket e della mail in agenzia/gerenza e per conoscenza a Blue Assistance.
+GESTIONE ANOMALIA
+Nel caso in cui il responsabile non ritenga opportuna la decisione proposta dall'operatore, richiederà una rilavorazione del documento prima della spedizione.
+ALTRO STRUMENTO
+E-mail
+TIPO
+Manuale
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+CONSULENZA  RETAIL - Responsabile
+APPLICATIVO INFORMATICO
+ISAAC
+EFFICACIA DEL CONTROLLO
+Media
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+070
+TITOLO
+Contatto con il cliente per condivisione modifiche
+DESCRIZIONE
+L'agente, ricevuta il ticket o la mail dalla sede contenente le variazioni di copertura da applicare al contratto, contatta il cliente richiamandolo in agenzia al fine di condividere tali modifiche e richiederne l'accettazione. Nel caso di reticenza gestita in gerenza, il gerente contatta il broker affinchè proponga al cliente le variazioni.
+ALTRO STRUMENTO
+-
+ESECUTORE
+RETE DI VENDITA
+APPLICATIVO INFORMATICO
+-
+
+
+
+080
+1A - Accordo con cliente 
+sulle modifiche
+TITOLO
+Accettazione modifiche e firma appendice precisazione
+DESCRIZIONE
+"Nel caso in cui il cliente accettasse le modifiche, l'agente/gerente contatta l'addetto di Direzione per confermare l'accettazione delle modifiche. 
+L'operatore di Sede accede all'applicativo, richiama il contratto in questione e procede (tramite specifica funzione) a modificare il contratto. Terminata la variazione, l'addetto stampa l'appendice di precisazione (documento che riepiloga le variazioni) e invia il documento tramite mail o Isaac all'Agenzia per richiedere la firma dell'Assicurato." 
+ALTRO STRUMENTO
+Posta interna
+ESECUTORE
+BACK OFFICE CONTRATTI SALUTE - Ufficio
+APPLICATIVO INFORMATICO
+ISAAC
+PASS
+
+090
+TITOLO
+Verificare la correttezza e la firma dell'appendice
+DESCRIZIONE
+L'operatore, ricevuta l'appendice tramite mail o apposito applicativo dall'agenzia/gerenza, effettua una verifica di completezza controllando che nel documento siano presenti la firma dell'agente/gerente, la firma del contraente e la data di perfezionamento dell'atto.
+GESTIONE ANOMALIA
+Qualora venga riscontrata la mancanza della firma sul documento, l'operatore contatta l'agente/gerente esponendo il problema e richiedendone una copia firmata.
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+ISAAC
+EFFICACIA DEL CONTROLLO
+Media
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+

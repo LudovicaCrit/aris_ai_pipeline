@@ -1,0 +1,420 @@
+convert /mnt/user-data/uploads/2_2_3_BHC_Gestione_accordo_commerciale.doc as a Writer document -> /tmp/tmpz5pipgyp/2_2_3_BHC_Gestione_accordo_commerciale.txt using filter : Text
+﻿Flusso di processo
+
+2.2.3.BHC Gestione dell'accordo commerciale
+Macroprocesso
+
+2.BHC PROCESSI DI BUSINESS
+Processo
+
+2.2.BHC Commerciale
+Sottoprocesso
+
+-
+Periodicità di esecuzione
+
+Ad evento
+Owner
+
+BUSINESS DEVELOPMENT - Ufficio
+App senza presidio IT
+
+
+Recovery Point Objective
+
+NA
+Recovery Time Objective
+
+N/A
+
+
+
+Data ultimo aggiornamento
+
+Nov 14, 2025, 1:08:42 PM
+
+Svolto per Reale Mutua
+No
+
+Svolto per Italiana
+No
+
+Svolto per Blue Assistance
+No
+
+Svolto per Banca Reale
+No
+
+Svolto per Reale Immobili
+No
+
+Svolto per Reale Seguros
+No
+
+Svolto per Reale Vida
+No
+
+Svolto per ITES
+No
+
+Svolto per Compagnia Extragruppo
+No
+
+Svolto per Reale Chile
+No
+
+Svolto per Reale Foundation
+No
+
+Svolto per BHC
+Si
+
+Svolto per Reale International
+No
+
+Svolto per Reale Ites Esp
+No
+
+Svolto per Italnext
+No
+
+Svolto per Ydrogios
+No
+
+Svolto per Reale Immobili Esp
+No
+
+
+
+
+
+Dati trattati
+
+
+Riservatezza
+
+4
+Integrità
+
+4
+Disponibilità
+
+5
+Affidabilità
+
+5
+Privacy
+
+Non compilato
+
+
+Codice
+Attività
+Attività
+Codice
+Controllo
+Controllo
+010
+TITOLO
+Ricezione richiesta
+DESCRIZIONE
+Il processo descrive, convoglia ed organizza tutta l’attività associata alla redazione e revisione di un contratto commerciale per BHC.  
+ * Il processo contestualizza le attività relative alla richiesta di predisposizione di un contratto standard/fuori standard da parte di un Committente o un richiedente di BHC, nonché della Carta Servizi. 
+Nel processo sono descritte le attività di verifica Fiscale e Legale svolte dal Gruppo e le successive fasi di validazione dei contenuti, sottoscrizione, firma e archiviazione del contratto. 
+ 
+La richiesta di predisposizione di un nuovo contratto e/o della Carta Servizi o revisione di uno in essere può pervenire dal referente mkt per conto di un Committente o per conto della Direzione Generale di BHC e viene effettuata a seguito delle attività di "Predisposzione e sottoscrizione del contratto commerciale" o a seguito di incontri propedeutici con la funzione legale di Gruppo.
+In qualsiasi caso, l’addetto deve: 
+.Verificare la completezza delle informazioni e dei documenti ricevuti 
+.Richiedere eventuali ulteriori informazioni alla funzione richiedente di BHC 
+.Comunicare e confermare la presa in carico della richiesta alla funzione richiedente BHC. 
+ 
+Per quanto concerne la gestione della Carta Servizi, si rimanda al dettaglio del processo di "Set up e manutenzione delle popolazioni di utenti" il quale contestualizza le fasi di redazione della bozza e invio della richiesta a ufficio giuridico competente per le successive verifiche.  
+ 
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+GROUP PRIVACY - Office
+APPLICATIVO INFORMATICO
+-
+
+
+
+020
+1A - Contratto commerciale per
+prodotto/servizio standard
+TITOLO
+Predisposizione bozza documento/appendice contrattuale
+DESCRIZIONE
+L’addetto confrontandosi con la funzione richiedente di BHC, predispone la bozza del contratto o dell'appendice contrattuale e, nel caso in cui si renda necessario effettuare degli approfondimenti, la inoltra per le opportune verifiche alle funzioni di Gruppo competenti (es: fiscale,legale,ecc). 
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+GROUP PRIVACY - Office
+APPLICATIVO INFORMATICO
+-
+
+
+
+030
+1B - Contratto commerciale per
+prodotto/servizio
+no standard
+TITOLO
+Predisposizione bozza contrattuale fuori standard
+DESCRIZIONE
+L'addetto nel caso non possa avvalersi di un contratto assimilabile a format standard predispone la bozza degli allegati operativi da allegare al contratto commerciale confrontandosi laddove necessario con la funzione richiedente di BHC e con il Committente per il tramite della stessa.
+ALTRO STRUMENTO
+-
+ESECUTORE
+GROUP PRIVACY - Office
+APPLICATIVO INFORMATICO
+-
+
+
+
+040
+TITOLO
+Revisione e/o supporto redazione bozza contrattuale
+DESCRIZIONE
+L'addetto verifica e/o predispone la bozza contrattuale in funzione delle informazioni ricevute e, laddove necessario, contatta la funzione richiedente di BHC per eventuali chiarimenti; procede quindi, se necessario, a trasmettere la bozza contrattuale alla funzione Legale/Fiscale di Gruppo oppure a restituirla direttamente alla funzione richiedente di BHC.
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+GROUP PRIVACY - Office
+APPLICATIVO INFORMATICO
+-
+
+
+
+050
+2B - Richiesta parere Legale
+TITOLO
+Richiesta parere Legale
+DESCRIZIONE
+Il richiedente di BHC contatta la funzione Legale di Gruppo al fine di ottenere un parere legale sugli aspetti normativi del contratto commerciale che andrà a redigere. Qualora siano necessari ulteriori approfondimenti, verranno organizzati degli specifici incontri.
+ALTRO STRUMENTO
+-
+ESECUTORE
+BUSINESS DEVELOPMENT - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+060
+TITOLO
+Verifica adeguatezza legale
+DESCRIZIONE
+L’addetto ricevuta la richiesta di parere legale, verifica che quanto riportato nella bozza ricevuta sia idoneo dal punto di vista legale rispetto alle necessità aziendali, apportando le eventuali modifiche necessarie.
+GESTIONE ANOMALIA
+In caso di anomalie/incongruenze l'addetto richiede di apportare modifiche o integrazioni alla bozza contrattuale. 
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+GROUP LEGAL AFFAIRS - Office 
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+Normativo
+MODALITA' ESECUZIONE CONTROLLO
+A campione
+
+070
+2C - Richiesta parere fiscale
+TITOLO
+Richiesta parere fiscale
+DESCRIZIONE
+Il richiedente di BHC contatta la funzione Fiscalità società strumentali di Gruppo al fine di ottenere un parere fiscale sul contratto commerciale che andrà a redigere. Qualora siano necessari ulteriori approfondimenti, verranno organizzati degli specifici incontri.
+ALTRO STRUMENTO
+-
+ESECUTORE
+BUSINESS DEVELOPMENT - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+080
+TITOLO
+Verifica adeguatezza fiscale
+DESCRIZIONE
+L'addetto ricevuta la richiesta di parere fiscale, verifica che quanto riportato nella bozza ricevuta sia conforme dal punto di vista fiscale, segnalando eventuali aspetti da modificare.  
+
+GESTIONE ANOMALIA
+In caso di anomalie/incongruenze l'addetto richiede di apportare modifiche o integrazioni alla bozza contrattuale.
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+NON INSURANCE COMPANIES TAX AFFAIRS - GROUP TAX CONSULTANCY & LITIGATION - Office
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+Normativo
+MODALITA' ESECUZIONE CONTROLLO
+A campione
+
+
+
+090
+TITOLO
+Controllo coerenza bozza contrattuale
+DESCRIZIONE
+L'addetto, ricevuta la bozza contrattuale e le eventuali osservazioni, verifica che la documentazione sia coerente rispetto alle specifiche fornite e/o alle variazioni condivise. Trasmette quindi la bozza contrattuale alla funzione richiedente di BHC che ne aveva fatto richiesta.  
+
+GESTIONE ANOMALIA
+Nel caso in cui dalle verifiche emergano delle incongruenze, l'addetto contatta la funzione competente di BHC per gli opportuni adeguamenti. 
+
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+GROUP PRIVACY - Office
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+Operativo
+MODALITA' ESECUZIONE CONTROLLO
+A campione
+
+100
+TITOLO
+Invio al Committente per validazione contenuti
+DESCRIZIONE
+Il richiedente di BHC, dopo aver confermato via mail l'adeguatezza del documento ricevuto dall'ufficio preposto, lo inoltra al Committente per opportuna verifica e consolidamento dei contenuti. 
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+BUSINESS DEVELOPMENT - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+110
+TITOLO
+Verifica e validazione contenuti documento
+DESCRIZIONE
+Il referente del Committente, ricevuta la documentazione, ne verifica la coerenza rispetto agli accordi presi e ne conferma l'adeguatezza alla funzione richiedente di BHC.
+GESTIONE ANOMALIA
+Nel caso in cui il committente riscontri delle incongruenze, contatta la funzione richiedente di BHC c per la risoluzione delle stesse.
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+COMMITTENTE
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+Operativo
+MODALITA' ESECUZIONE CONTROLLO
+A campione
+
+120
+TITOLO
+Ricezione della validazione
+DESCRIZIONE
+La funzione richiedente di BHC ricevuta la conferma dal committente invia richiesta di formalizzazione del contratto commerciale alla funzione preposta. 
+ALTRO STRUMENTO
+-
+ESECUTORE
+BUSINESS DEVELOPMENT - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+130
+TITOLO
+Predisposizione e invio contratto/appendice definitivo
+DESCRIZIONE
+L'addetto predispone la documentazione definitiva e la inoltra alla funzione richiedente di BHC per la sottoscrizione da parte del Committente. 
+ALTRO STRUMENTO
+-
+ESECUTORE
+GROUP PRIVACY - Office
+APPLICATIVO INFORMATICO
+-
+
+
+
+140
+TITOLO
+Sottoscrizione contratto/appendice commerciale definitivo
+DESCRIZIONE
+La funzione richiedente BHC trasmette al Committente la documentazione ricevuta per apporre la firma e sottoscrivere il contratto commerciale. Una volta firmato, la funzione richiedente di BHC provvede a trasmetterlo alla Direzione Generale di BHC per la controfirma. 
+ALTRO STRUMENTO
+-
+ESECUTORE
+COMMITTENTE
+APPLICATIVO INFORMATICO
+-
+
+
+
+150
+TITOLO
+Controfirma contratto commerciale definitivo
+DESCRIZIONE
+Dopo aver ricevuto il contratto commerciale già firmato dal Committente, la Direzione Generale di BHC procede all’apposizione della controfirma come segno di accettazione e impegno. Dopodiché la Direzione Generale trasmette il contratto commerciale firmato alla funzione richiedente BHC che provvede a inviarlo alla funzione preposta. 
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+BLUE HEALTH CENTER - DIREZIONE GENERALE
+APPLICATIVO INFORMATICO
+-
+
+
+
+160
+TITOLO
+Archiviazione contratto commerciale
+DESCRIZIONE
+L'addetto archivia il contratto secondo le modalità previste. Successivamente procede all'invio del contratto commerciale definitivo al Committente. 
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+GROUP PRIVACY - Office
+APPLICATIVO INFORMATICO
+-
+
+
+
+

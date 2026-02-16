@@ -1,0 +1,825 @@
+convert /mnt/user-data/uploads/2_4_04_BLUE_Gestione_apertura_sx_auto_e_RE.doc as a Writer document -> /tmp/tmp9eug1p5c/2_4_04_BLUE_Gestione_apertura_sx_auto_e_RE.txt using filter : Text
+﻿Flusso di processo
+
+2.4.04.BLUE Gestione apertura sx auto e RE
+Macroprocesso
+
+2.BLUE PROCESSI DI BUSINESS
+Processo
+
+2.4.BLUE SERVIZI AMMINISTRATIVI
+Sottoprocesso
+
+-
+Periodicità di esecuzione
+
+Ad evento
+Owner
+
+SERVIZI AMMINISTRATIVI
+App senza presidio IT
+
+
+Recovery Point Objective
+
+Fascia 1
+Recovery Time Objective
+
+
+
+
+
+Data ultimo aggiornamento
+
+Jul 24, 2025, 2:27:38 PM
+
+Svolto per Reale Mutua
+Si
+
+Svolto per Italiana
+Si
+
+Svolto per Blue Assistance
+No
+
+Svolto per Banca Reale
+No
+
+Svolto per Reale Immobili
+No
+
+Svolto per Reale Seguros
+No
+
+Svolto per Reale Vida
+No
+
+Svolto per ITES
+No
+
+Svolto per Compagnia Extragruppo
+Si
+
+Svolto per Reale Chile
+No
+
+Svolto per Reale Foundation
+No
+
+Svolto per BHC
+No
+
+Svolto per Reale International
+No
+
+Svolto per Reale Ites Esp
+No
+
+Svolto per Italnext
+No
+
+Svolto per Ydrogios
+No
+
+Svolto per Reale Immobili Esp
+No
+
+
+
+
+
+Dati trattati
+
+
+Riservatezza
+
+3
+Integrità
+
+3
+Disponibilità
+
+2
+Affidabilità
+
+3
+Privacy
+
+PERSONALI COMUNI
+
+
+Codice
+Attività
+Attività
+Codice
+Controllo
+Controllo
+010
+TITOLO
+Ricezione e verifica correttezza canalizzazione
+DESCRIZIONE
+Le richieste di apertura sinistro possono pervenire tramite:
+. posta: in questo caso la denuncia viene scansionata e inviata prima via mail o poi in originale da parte del fornitore incaricato;
+. mail/PEC: vengono inoltrate via mail dal fornitore incaricato ad un indirizzo mail specifico che è gestito con un meccanismo di IA, che elabora un tracciato dati e lo rende disponibile unitamente alla documentazione su un cruscotto specifico.
+Per entrambe le suddette canalizzazioni la persona incaricata, prima di procede con la gestione, verifica che il sinistro denunciato sia di competenza della propria struttura (tutti i prodotti ad esclusione di Vita, Malattia, Assistenza, Cauzioni, Fideiussioni e, a prescindere dal prodotto, tutti i sinistri riferibili alle polizze dei dipendenti del gruppo).
+Nel caso il sinistro non possa essere gestito, in quanto non di propria competenza, la persona incaricata opera come segue:
+a) sinistro riferibile a polizza in capo alla Gerenza:
+. inoltra una mail alla Gerenza di competenza o al broker affinché stabiliscano come procedere nella gestione;
+b) sinistro riferibile ad Agenza (diversa da Gerenza):
+. inoltra una mail all'agenzia di riferimento della polizza oggetto di sinistro aggiungendo in copia conoscenza corrispondenza sinistri e il/la responsabile del CLD di rete affinché verifichino come procedere nella gestione.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINTESI
+
+020
+1A - Classificazione corretta
+TITOLO
+Verificare correttezza targa
+DESCRIZIONE
+La persona incaricata inserisce a sistema la targa indicata sulla documentazione al fine di verificare se esiste un contraente associato ad essa. Successivamente inserisce la data di accadimento del sinistro e verifica la presenza di una polizza in vigore legata alla targa inserita. Nel caso la polizza sia presente viene visualizzata la scheda anagrafica del contraente.
+GESTIONE ANOMALIA
+Nel caso in cui il sistema non identifichi un contraente associato alla targa immessa, alla persona incaricata viene inibita la possibilità di procedere con l’apertura del sinistro. In tal caso la persona incaricata dovrà inoltrare una comunicazione all’agenzia e al CLD di riferimento per la gestione del caso, mentre la documentazione in originale viene trasferita all'ufficio UCS.
+In caso di sinistro su polizza emessa dalla gerenza, la suddetta informativa viene inviata al broker (per insufficienza di dati) o alla gerenza (per problematiche di tipo amministrativo).
+ALTRO STRUMENTO
+Posta interna
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+
+
+030
+2A - Targa corretta
+TITOLO
+Verificare correttezza e completezza anagrafica
+DESCRIZIONE
+La persona incaricata verifica la correttezza e la completezza dei dati registrati nella scheda anagrafica dell'assicurato con i dati presenti sulla documentazione. Nel caso in cui i dati dell'assicurato disponibili siano incompleti, ma la targa ed il veicolo coincidano, la persona incaricata procede comunque con l'apertura del sinistro.
+GESTIONE ANOMALIA
+Nel caso in cui i dati dell'assicurato disponibili non coincidano con quelli riportati nella denuncia alla persona incaricata viene inibita la possibilità di procedere con l’apertura del sinistro. In tal caso la persona incaricata dovrà inoltrare una comunicazione all’agenzia e al CLD di riferimento per la gestione del caso, mentre la documentazione in originale viene trasferita all'ufficio UCS. 
+In caso di sinistro su polizza emessa dalla gerenza, la suddetta informativa viene inviata al broker (per insufficienza di dati) o alla gerenza (per problematiche di tipo amministrativo).
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+
+
+040
+3A - Anagrafica corretta
+TITOLO
+Verificare copertura amministrativa
+DESCRIZIONE
+La persona incaricata, tramite controllo automatico, verifica che la polizza, alla data di accadimento del sinistro, sia in vigore e che siano stati pagati correttamente i premi definiti contrattualmente. 
+GESTIONE ANOMALIA
+Nel caso in cui il sistema rilevi delle anomalie (sia per un'effettiva mancanza di copertura amministrativa della polizza o per un disallineamento informatico tra gli applicativi di supporto), alla persona incaricata viene inibita la possibilità di procedere con l’apertura del sinistro. 
+In tal caso la persona incaricata dovrà inoltrare una comunicazione all’agenzia e al CLD di riferimento per la gestione del caso, mentre la documentazione in originale viene trasferita all'ufficio UCS.
+In caso di sinistro su polizza emessa dalla gerenza, la suddetta informativa viene inviata al broker (per insufficienza di dati) o alla gerenza (per problematiche di tipo amministrativo).
+ALTRO STRUMENTO
+Posta interna
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+
+
+050
+4A - Copertura amministrativa presente
+TITOLO
+Verificare presenza evento e/o garanzia colpita
+DESCRIZIONE
+Sulla base della polizza selezionata, il sistema visualizza l'elenco degli eventi e delle garanzie coperte. La persona incaricata, in base della dinamica comunicata, verifica la copertura dell'evento o della garanzia.
+
+GESTIONE ANOMALIA
+Nel caso in cui non siano presenti il tipo evento denunciato o la garanzia colpita, quindi il sinistro non sia coperto, alla persona incaricata viene inibita la possibilità di procedere con l’apertura del sinistro. 
+In tal caso la persona incaricata dovrà inoltrare una comunicazione all’agenzia e al CLD di riferimento per la gestione del caso, mentre la documentazione in originale viene trasferita all'ufficio UCS.
+In caso di sinistro su polizza emessa dalla gerenza, la suddetta informativa viene inviata al broker (per insufficienza di dati) o alla gerenza (per problematiche di tipo amministrativo).
+ALTRO STRUMENTO
+Posta interna
+TIPO
+Manuale
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+
+
+060
+5A - Evento e/o garanzia colpita presente
+TITOLO
+Verificare presenza sinistri aperti
+DESCRIZIONE
+La persona incaricata, tramite un controllo automatico del sistema, verifica che il sinistro non sia stato precedentemente aperto.
+Nel caso in cui non siano presenti sinistri già aperti con le coordinate inserite, l’operatore procede con il caricamento degli ulteriori dati richiesti dalla procedura informatica.
+GESTIONE ANOMALIA
+Verificato che la documentazione ricevuta via posta sia relativa ad un sinistro precedentemente aperto, la persona incaricata allega la documentazione scansionata al sinistro evidenziato e archivia l'evenutale cartaceo.
+Per i sinistri canalizzati tramite il sistema di IA, la persona incaricata accede al sistema specifico ed inserisce il riferimento al numero di sinistro che risulta essere già stato denunciato e tramite funzionalità specifica trasferisce la gestione al "Polo amministrativo".
+ALTRO STRUMENTO
+Posta interna
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+SINTESI
+SINISTRI WEB
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+
+
+070
+TITOLO
+Verificare completezza documentazione
+DESCRIZIONE
+La persona incaricata, prima di procedere con l'inserimento dei dati a sistema, verifica se la documentazione rispetto alla tipologia di sinistro denunciato è completa. 
+GESTIONE ANOMALIA
+Nel caso in cui la documentazione risulti parziale, la persona incaricata:
+a) in caso di sx su polizza non emessa da gerenza: inoltra una comunicazione all’agenzia e al CLD di riferimento per la gestione del caso, mentre la documentazione in originale viene trasferita all'ufficio UCS.
+b) in caso di sinistro su polizza emessa da gerenza: richiede la documentazione mancante o i chiarimenti necessari al broker competente via mail
+ALTRO STRUMENTO
+-
+TIPO
+-
+SCOPO
+-
+PERIODICITA'
+-
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+080
+6A - Documentazione completa
+TITOLO
+Avvio denuncia
+DESCRIZIONE
+L'operatore procede con la lavorazione della denuncia inserendo sul gestionale tutti i dati utili, tra cui:
+- luogo di avvenimento del sinistro,
+- nome e cognome delle persone coinvolte (e.g. conducente, assicurato, trasportato),
+- numero di veicoli coinvolti,
+- targhe dei veicoli coinvolti,
+- attribuzione della responsabilità (i.e. assicurato, controparte, entrambi, ignoto),
+- circostanze del sinistro (definite in base alla dinamica del sinistro e con l'ausilio di una tabella),
+- presenza di lesioni (se presenti, si inseriscono i nominativi), 
+- intervento delle forze dell’ordine o di testimoni,
+- presenza di danni riportati al veicolo o a cose esterne.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+
+
+
+090
+TITOLO
+Apertura del sinistro
+DESCRIZIONE
+Una volta effettuato il salvataggio dei dati caricati da parte dell’operatore, il sistema assegna il numero di pratica, appone in automatico un preventivo standard per ogni garanzia selezionata, identifica l’ente gestore per tutte le posizioni coinvolte ed assegna il numero di sinistro.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+
+100
+7C - Sinistro CARD 
+Gest o Concorsuale
+
+TITOLO
+Verificare copertura SIC
+DESCRIZIONE
+L'applicativo di gestione dei sinistri si collega in automatico (solo per sinistri Card Gest e Card Concorsuali) al Sistema informativo Integrato Controlli veicoli (S.I.C.) messo a disposizione dell'ANIA ed effettua un'interrogazione per verificare la copertura del veicolo di controparte, in base ai seguenti dati:
+- targhe del veicolo della Gestionaria e del veicolo della Debitrice,
+- nomi della compagnia Gestionaria e della compagnia Debitrice,
+- data di accadimento del sinistro.
+L'esito del SIC viene riportato in automatico su SIWEB per essere reso disponibile alla funzione preoposta alla gestione dell'istruttoria; l'interrogazione del SIC può essere:
+- "OK";
+- "Dati non sufficienti" (non trova una corrispondenza tra i dati inseriti e le polizze nel proprio archivio informatico);
+- "KO".
+Qualora uno dei veicoli sia stato coinvolto in almeno 3 sinistri negli ultimi 6 mesi, oltre al sinistro in questione, il SIC evidenzia anche un alert, che viene recepito sul sistema gestionale per poi essere segnalato in automatico all'ente gestore, affinchè quest'ultimo attivi le opportune procedure antifrode (e.g. si richiede al perito di effettuare una perizia di riscontro al veicolo di controparte, in tal modo la compagnia si tutela dal rischio di non ottenere il forfait dalla compagnia Debitrice).
+Parallelamente, viene inviato in automatico il flusso di verifica della responsabilità verso la Debitrice tramite il sistema informatico dell'ANIA.
+GESTIONE ANOMALIA
+Nel caso in cui l'esito del S.I.C. sia "dati non sufficienti" o "KO", il sistema procede comunque con l'apertura del sinistro evidenziado però la situazione sull'applicativo di gestione dei sinistri per allertare l'ente gestore.
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+SIC
+SINISTRI WEB
+EFFICACIA DEL CONTROLLO
+Media
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+110
+TITOLO
+Invio segnalazione perito e ente gestore
+DESCRIZIONE
+La persona incaricata, se necessario e se disponibile, seleziona dall’elenco messo a disposizione dal sistema il perito a cui affidare l’incarico in base alla residenza del contraente e/o della controparte oppure in base all'indirizzo del patrocinatore.Il sistema invia in automatico una segnalazione al perito con allegata la scheda tecnica del sinistro.
+La persona incaricata, verificata la corretta assegnazione del perito proposto dal sistema, conferma o modifica il perito e procede al trasferimento del sinistro all'ente gestore competente.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+
+
+
+120
+TITOLO
+Abbinamento documentazione al sinistro
+DESCRIZIONE
+La persona incaricata allega al sinistro da lui aperto la documentazione presente nella mail ricevuta. 
+In caso di denuncia canalizzata tramite il sistema di IA, la persona incaricata non effettua alcun abbinamento, ma accedendo al sistema di IA - tramite funzionalità specifica - trasferisce la gestione al "Polo amministrativo".
+
+ALTRO STRUMENTO
+Posta interna
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINTESI
+SINISTRI WEB
+DOCUMENTALE PORTAFOGLIO
+
+
+
+130
+TITOLO
+Invio informativa avvenuta apertura sinistro
+DESCRIZIONE
+In caso di denuncia su polizza emessa da Gerenza la persona incaricata, dopo aver aperto il sinistro, comunica al broker il numero del sinistro e l'ente gestore.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+140
+TITOLO
+Invio informativa avvenuta apertura sinistro
+DESCRIZIONE
+In caso di denuncia canalizzata tramite Service Center la persona incaricata, dopo aver aperto il sinistro, comunica all'agenzia ed al Service Center il numero del sinistro.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+150
+TITOLO
+Invio informativa mancata apertura sx
+DESCRIZIONE
+La persona incaricata invia tramite mail all'agenzia e, per conoscenza, a corrispondenza sinistri e responsabile CLD di rete una copia della denuncia cartacea pervenuta con un testo standard di comunicazione per la mancata apertura del sinistro.
+L'eventuale documentazione cartacea viene inviata all'ufficio UCS.
+ 
+In caso di mancata copertura della polizza si provvede ad inviare e-mail informativa all'unità corrispondenza sinistri.
+ALTRO STRUMENTO
+Posta interna
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+160
+TITOLO
+Richiesta chiarimenti a broker o gerenza
+DESCRIZIONE
+La persona incaricata, in funzione dell'anomalia, invia una comunicazione al broker o alla gerenza. Di norma vengono richiesti al broker chiarimenti in mancanza di dati utili all'apertura del sinistro o in assenza di documentazione completa, mentre viene interessata la gerenza in presenza di problematiche di tipo amministrativo.
+La documentazione viene temporaneamente archiviata in un'apposita cartella in attesa di ricevere le informazioni richieste.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+170
+TITOLO
+Ricerca sinistro
+DESCRIZIONE
+La persona incaricata verifica se è già presente la denuncia di sinistro su SIWEB. 
+Se il sinistro risulta già denunciato, non procede alla ricerca della posizione assicurativa ma allega la documentazione scansionata al sinistro di competenza e archivia l'evenutale cartaceo; diversamente 
+ricerca la posizione assicurativa per poi procedere con l'apertura del sinistro.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+
+
+
+180
+TITOLO
+Verifica poziione assicurativa
+DESCRIZIONE
+Trovandosi di fronte ad una nuova denuncia, l'operatore ricerca la posizione assicurativa sull'applicativo. Se la posizione risulta regolare avvia l'apertura del sinistro, in caso contrario effettua le opportune verifiche.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+PASS
+
+
+
+190
+8A - Posizione irregolare
+TITOLO
+Richiesta di verifica
+DESCRIZIONE
+Se la persona incaricata non trova la posizione sull'applicativo, la segnala all'ufficio corrispondenza sinistri.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+200
+TITOLO
+Verifica regolarità amministrativa
+DESCRIZIONE
+La persona incaricata si interfaccia con il Committente al fine di verificare la posizione assicurativa e fornisce l'esito all'ufficio richiedente.
+ALTRO STRUMENTO
+-
+ESECUTORE
+ACCOUNT SINISTRI SALUTE - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+220
+TITOLO
+Avvio apertura sinistro
+DESCRIZIONE
+La persona incaricata, in presenza di copertura assicurativa verificata, avvia la pratica di apertura del sinistro; se incorre in anomalie tecniche ne raccoglie l'evidenza per poi procedere alla segnalazione nei cofronti della funzione competente.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+230
+TITOLO
+Apertura richiesta intervento per anomalia
+DESCRIZIONE
+La persona incaricata, collegandosi alla intranet aziendale, procede al caricamento della richiesta di intervento utile a risolvere l'anomalia evidenziatasi.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+INTRAWEB BLUE ASSISTANCE
+
+
+
+240
+TITOLO
+Apertura sinistro
+DESCRIZIONE
+La persona incaricata attende la risoluzione dell'anomalia per poi procedere all'apertura del sinistro.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+250
+TITOLO
+Individuazione posizione assicurativa e dati accadimento
+DESCRIZIONE
+La persona incaricata, dopo aver avviato l'apertura del sinistro, inserisce i dati utili alla ricerca dell'anagrafica corrispondente.
+Selezionata l'anagrafica corretta, il gestionale sinistri acquisisce in automatico i dati anagrafici dal portafoglio.
+La persona incaricata procede poi ad inserire i dati collegati all'evento per verificare la corretta copertura amministrativa.
+I dati inseriti sono:
+- data di accadimento del sinistro;
+- luogo di accadimento del sinistro (nazione e provincia);
+- tipologia di documento pervenuto (i.e. denuncia, richiesta risarcimento danneggiato);
+- intervento delle autorità e presenza o meno di testimoni.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+
+255
+TITOLO
+Verificare presenza di altri sinistri aperti RE
+DESCRIZIONE
+La persona incaricata verifica nuovamente, tramite una procedura automatica, che lo stesso sinistro non sia già stato aperto in precedenza; la procedura di controllo tiene conto dei seguenti dati:
+- la data di accadimento del sinistro;
+- il numero polizza;
+- il ramo tecnico.
+GESTIONE ANOMALIA
+Se il sinistro risulta già presente, la persona incaricata opera come segue:
+1) sx su prodotto CASA e denuncia riconducibile ad una garanzia differente rispetto a quella cui si riferisce il sinistro già aperto: apre il sinistro.
+2) in tutti gli altri casi: allega la documentazione al sinistro già aperto e archivia l'originale
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+
+
+260
+TITOLO
+Controllare la completezza dei dati
+DESCRIZIONE
+Salvati i primi dati caricati, il sistema verifica che tutti i campi obbligatori siano stati completamente alimentati.
+GESTIONE ANOMALIA
+In caso di esito negativo del controllo, il sistema non permette l'accesso alle maschere successive e l'operatore deve provvedere a compilare correttamente il dato mancante.
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+270
+TITOLO
+Recupero dati del bene assicurato
+DESCRIZIONE
+La persona incaricata, procede con la selezione dell'evento o della garanzia colpita. Sull'applicativo, a fronte del medesimo sinistro, è possibile selezionare più garanzie colpite. 
+Solo nel caso di sinistro su prodotto casa, se viene selezionata più di una garanzia, è data la possibilità di aprire più sinistri.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+
+280
+TITOLO
+Verificare presenza garanzia colpita in polizza
+DESCRIZIONE
+Il sistema, a fronte della selezione dell'evento o della garanzia, evidenzia la presenza o meno della stessa in polizza. Nel caso in cui l'esito sia positivo, la persona incaricata può procedere con l'iter.
+GESTIONE ANOMALIA
+Nel caso in cui la garanzia o l'evento non risultino in copertura non è possibile procedere con l'inserimento di ulteriori dati e con l'apertura del sinistro; pertanto la persona incaricata trasferisce tutta la documentazione in originale afferente la denuncia al CLD competente.
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+290
+TITOLO
+Inserimento dati di dettaglio sinistro
+DESCRIZIONE
+La persona incaricata, dopo aver ricevuto dal sistema conferma della presenza di evento o garanzia colpita in polizza, inserisce gli ulteriori dati relativi al sinistro non compilati nella fase di caricamento iniziale.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+
+300
+TITOLO
+Controllare completezza dati di dettaglio
+DESCRIZIONE
+Ogni volta che la persona incaricata salva i dati caricati a sistema, lo stesso verifica che tutti i campi obbligatori siano stati completamente alimentati.
+GESTIONE ANOMALIA
+In caso negativo del controllo, il sistema non permette l'accesso alle maschere successive e la persona incaricata deve completare i dati mancanti.
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+320
+TITOLO
+Salvataggio apertura e definizione del preventivo
+DESCRIZIONE
+Il sistema appone in automatico un preventivo standard per ogni garanzia selezionata, assegna il codice identificativo al sinistro, lo classifica in base a regole di canalizzazione predefinite e assegna l'ente gestore che prende in carico la pratica.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+
+
+
+330
+TITOLO
+Assegnazione incarico perito
+DESCRIZIONE
+La persona incaricata, se necessario, ha la possibilità di assegnare l'incarico al perito selezionandolo dall'elenco che il sistema mette a disposizione sulla base della tipologia e della zona geografica di accadimento del sinistro.
+La persona incaricata ha anche la possibilità di richiedere l'assegnazione dell'incarico ad un perito non appartenente alla propria area geografica di competenza.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+SINISTRI WEB
+
+
+
+340
+TITOLO
+Abbinamento documentazione al sinistro
+DESCRIZIONE
+La persona incaricata allega al sinistro da lui aperto la documentazione ricevuta via mail o presente sul sistema di IA.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+DOCUMENTALE PORTAFOGLIO
+SINISTRI WEB
+
+
+
+350
+TITOLO
+Invio informativa avvenuta apertura sinistro
+DESCRIZIONE
+In caso di apertura di un sinistro RE pervenuta tramite IA la persona incaricata, dopo aver aperto il sinistro, comunica all’agenzia il numero del sinistro e allega a documentale la mail inviata.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 2 - Ufficio
+APPLICATIVO INFORMATICO
+DOCUMENTALE PORTAFOGLIO
+SINISTRI WEB
+
+
+
+

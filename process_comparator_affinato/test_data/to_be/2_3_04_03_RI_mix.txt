@@ -1,0 +1,201 @@
+convert /mnt/user-data/uploads/2_3_04_03_RI_Gestione_costi_spese_generali.doc as a Writer document -> /tmp/tmpbixkkoy4/2_3_04_03_RI_Gestione_costi_spese_generali.txt using filter : Text
+﻿Flusso di processo
+
+2.3.04.03.RI Gestione costi spese generali (WORKFLOW DIGITALE)
+Macroprocesso
+
+2.RI PROCESSI DI BUSINESS
+Processo
+
+2.3.RI Gestione amministrativa immobiliare
+Sottoprocesso
+
+2.3.04.RI Fatture attive e passive
+Periodicità di esecuzione
+
+Ad evento
+Owner
+
+BUDGET - Ufficio
+App senza presidio IT
+
+
+Recovery Point Objective
+
+Fascia 0
+Recovery Time Objective
+
+24 ore
+
+
+
+Data ultimo aggiornamento
+
+Jul 2, 2025, 11:44:20 AM
+
+Svolto per Reale Mutua
+No
+
+Svolto per Italiana
+No
+
+Svolto per Blue Assistance
+No
+
+Svolto per Banca Reale
+No
+
+Svolto per Reale Immobili
+Si
+
+Svolto per Reale Seguros
+No
+
+Svolto per Reale Vida
+No
+
+Svolto per ITES
+No
+
+Svolto per Compagnia Extragruppo
+No
+
+Svolto per Reale Chile
+No
+
+Svolto per Reale Foundation
+No
+
+Svolto per BHC
+No
+
+Svolto per Reale International
+No
+
+Svolto per Reale Ites Esp
+No
+
+Svolto per Italnext
+No
+
+Svolto per Ydrogios
+No
+
+Svolto per Reale Immobili Esp
+No
+
+
+
+
+
+Dati trattati
+
+
+Riservatezza
+
+2
+Integrità
+
+2
+Disponibilità
+
+2
+Affidabilità
+
+2
+Privacy
+
+NON PERSONALI
+
+
+Codice
+Attività
+Attività
+Codice
+Controllo
+Controllo
+010
+TITOLO
+Ricezione fattura elettronica
+DESCRIZIONE
+La persona incaricata riceve la fattura elettronica via mail da parte del sistema di smistamento workflow.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+BUDGET - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+020
+TITOLO
+Analisi fattura e classificazione contabile
+DESCRIZIONE
+La persona incaricata effettua una valutazione delle fatture ricevute e provvede a compilare le varie stringhe presenti sul file excel interno all'ufficio assegnando ad ogni fattura il relativo responsabile.
+ALTRO STRUMENTO
+File Excel
+ESECUTORE
+BUDGET - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+025
+TITOLO
+Verifica automatica dati fattura
+DESCRIZIONE
+Il sistema effettua una verifica automatica dei dati della fattura elettronica confrontandoli con l'anagrafica fornitori e i contratti attivi. Vengono controllati: partita IVA, IBAN, importi contrattuali, scadenze. In caso di anomalie, la fattura viene segnalata per verifica manuale.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+SISTEMA GESTIONE FATTURE
+
+030
+TITOLO
+Contatto con owner/ fornitori
+DESCRIZIONE
+La persona incaricata utilizza il sistema di ticketing interno per richiedere all'owner di riferimento la validazione della fattura. Il sistema traccia automaticamente i tempi di risposta e invia solleciti dopo 48 ore. L'owner deve confermare l'erogazione del servizio e la congruità degli importi tramite apposita checklist digitale.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+BUDGET - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+040
+TITOLO
+Verificare documentazione a supporto
+DESCRIZIONE
+La persona incaricata ricevuta la documentazione a supporto della fattura elettronica, effettua una verifica sugli importi corrisposti e sul servizio erogato. Se non sussistono incongruenze invia una mail all'Ufficio Amministrativo e in copia conoscenza al/alla relativo/a Dirigente ed all'owner di competenza.
+GESTIONE ANOMALIA
+Se vengono rilevate delle incongruenze, la persona incaricata richiede chiarimenti all'owner di competenza.
+ALTRO STRUMENTO
+E-mail
+TIPO
+Manuale
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+CONTROLLO QUALITÀ FORNITORI - Ufficio
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+Operativo
+MODALITA' ESECUZIONE CONTROLLO
+Massivo
+
+
+
+
+
+

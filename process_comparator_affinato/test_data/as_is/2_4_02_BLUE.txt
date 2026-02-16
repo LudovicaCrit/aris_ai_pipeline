@@ -1,0 +1,530 @@
+convert /mnt/user-data/uploads/2_4_02_BLUE_Gestione_moduli_di_identificazione.doc as a Writer document -> /tmp/tmpy8e8xd66/2_4_02_BLUE_Gestione_moduli_di_identificazione.txt using filter : Text
+﻿Flusso di processo
+
+2.4.02.BLUE Gestione moduli di identificazione
+Macroprocesso
+
+2.BLUE PROCESSI DI BUSINESS
+Processo
+
+2.4.BLUE SERVIZI AMMINISTRATIVI
+Sottoprocesso
+
+-
+Periodicità di esecuzione
+
+Ad evento
+Owner
+
+SERVIZI AMMINISTRATIVI
+App senza presidio IT
+
+
+Recovery Point Objective
+
+Fascia 1
+Recovery Time Objective
+
+
+
+
+
+Data ultimo aggiornamento
+
+Aug 11, 2025, 4:24:47 PM
+
+Svolto per Reale Mutua
+Si
+
+Svolto per Italiana
+Si
+
+Svolto per Blue Assistance
+No
+
+Svolto per Banca Reale
+No
+
+Svolto per Reale Immobili
+No
+
+Svolto per Reale Seguros
+No
+
+Svolto per Reale Vida
+No
+
+Svolto per ITES
+No
+
+Svolto per Compagnia Extragruppo
+No
+
+Svolto per Reale Chile
+No
+
+Svolto per Reale Foundation
+No
+
+Svolto per BHC
+No
+
+Svolto per Reale International
+No
+
+Svolto per Reale Ites Esp
+No
+
+Svolto per Italnext
+No
+
+Svolto per Ydrogios
+No
+
+Svolto per Reale Immobili Esp
+No
+
+
+
+
+
+Dati trattati
+
+
+Riservatezza
+
+4
+Integrità
+
+4
+Disponibilità
+
+5
+Affidabilità
+
+5
+Privacy
+
+PERSONALI SENSIBILI
+
+
+Codice
+Attività
+Attività
+Codice
+Controllo
+Controllo
+010
+TITOLO
+Ricezione e classificazione modulo di Identificazione
+DESCRIZIONE
+I moduli di identificazione su quali effettuare una verifica possono pervenire attraverso diversi canali. L'addetto, in funzione del canale di pervenimento, opera come segue:
+- posta interna: appone con un timbro la data pervenimento
+- mail da agenzia e funzione Antiriciclaggio: lavorazione del modulo on line su versione digitalizzata
+- estrazione da Portale Documentale sulla base delle archiviazioni giornaliere dei moduli di identificazione da parte della Rete Agenziale: estrapolazione dei moduli in formato pdf attraverso la Dashboard REALE MIC e gestione di eventuali scarti non leggibili dalla piattaforma attraverso restituzione della modulistica attraverso il consueto canale mail
+
+ 
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+020
+TITOLO
+Verificare completezza e correttezza
+DESCRIZIONE
+L'addetto fa una verifica manuale della correttezza e completezza dei dati inseriti nel modulo.
+Vengono controllate la conformità e la presenza delle firme necessarie.
+Se l'addetto non riscontra anomalie, procede con la ricerca della polizza e del modulo.
+GESTIONE ANOMALIA
+L'addetto, verificato che il modulo non è completo/corretto o che pur essendo completo e corretto risulta privo di firma, provvede a scansionarlo e/o archiviarlo se già in formato digitalizzato, classificandolo come "scarto"sulle cartelle in condivisione sul Sharepoint; si può trattare di:
+. "scarti privi di firma", qualora manchi una firma prevista;
+. "scarti bonifici", se l'iban risulta mancante o incompleto;
+. "scarti da reinvestimento", quando emerge una differenza tra l'importo incassato e quello pagato
+. “scarti autoesitati" nel caso in cui il sistema genera automaticamente dei moduli errati
+. "scarti vari", per tutte le altre tipologie di scarti non precedentemente classificati. 
+Successivamente l'addetto aggiorna quotidianamente un file contenuto nella cartella condivisa in sharepoint, indicando il conteggio delle movimentazioni; allo stesso tempo lascia il modulo di identificazione in sospeso in attesa di ricevere indicazioni dalla funzione Antiriciclaggio o dall'Agenzia sull'operatività da adottare.
+In tal modo la funzione Antiriciclaggio può verificare velocemente dove sono avvenute tali movimentazioni nelle cartelle condivise.
+
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+030
+TITOLO
+Ricerca della polizza e del modulo
+DESCRIZIONE
+L'addetto ricerca e richiama la polizza sull'applicativo specifico, che varia in funzione del tipo di polizza, controllando se il modulo è già stato caricato a sistema. Se il modulo è prelevato in digitale attraverso la Piattaforma Dashboard MIC i dati vengono in automatico imputati negli applicativi legacy dedicati, con conseguente restituzione nell’immediato dei risultati della ricerca.
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+VIS
+PASS
+AIA
+WINTAR
+
+
+
+040
+1A - Nuovo modulo
+TITOLO
+Caricamento dati a sistema
+DESCRIZIONE
+L'addetto provvede ad inserire, in relazione alla polizza precedentemente selezionata, i dati del modulo nell'applicativo dedicato.
+Se il modulo è prelevato in digitale attraverso la Piattaforma Dashboard MIC i dati vengono in automatico imputati nell’applicativo sulla base della validazione effettuata dall’operatore, coerentemente con i dati risultanti dalle ricerche Legacy.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+AIA
+WINTAR
+PASS
+VIS
+
+050
+TITOLO
+Controllare dati inseriti a sistema
+DESCRIZIONE
+L'addetto verifica la correttezza dei dati inseriti su sistema rispetto a quelli presenti sul modulo.
+GESTIONE ANOMALIA
+In presenza di dati difformi tra quelli a sistema e quelli riportati sul modulo, l'addetto modifica i dati in precedenza inseriti e li valida.
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+AIA
+PASS
+WINTAR
+VIS
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+060
+TITOLO
+Verifica corrispondenza dati
+DESCRIZIONE
+L'addetto confronta la corrispondenza tra i dati riportati nel modulo ricevuto e quelli presenti a sistema. Per visualizzare i dati del modulo già a sistema utilizza l'applicativo dedicato.
+Se il modulo è prelevato in digitale attraverso la Piattaforma Dashboard MIC i dati presenti nell’Archivio Unico – Wintar vengono automaticamente restituiti all’operatore per il confronto sulla loro corrispondenza e relativa correttezza.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+WINTAR
+VIS
+PASS
+AIA
+
+
+
+070
+TITOLO
+Validazione modulo presente a sistema
+DESCRIZIONE
+L'addetto, non riscontrando differenze tra i dati presenti sul modulo pervenuto e quelli già caricati a sistema, provvede ad effettuare manualmente il "pervenimento cartaceo" attraverso valorizzazione del campo “note” nell'applicativo dedicato e/o attraverso l’apposito processo automatizzato di validazione della Piattaforma Dashboard – MIC, la quale permette valorizzazione automatica del campo “note” su input dell’operatore e contestuale archiviazione di copia del modulo di identificazione lavorato direttamente a Portale Documentale.
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+PASS
+VIS
+AIA
+WINTAR
+
+080
+TITOLO
+Controllare validazione a sistema
+DESCRIZIONE
+L'addetto verifica che la validazione effettuata in precedenza sul "pervenimento cartaceo" sia stata recepita a sistema, sia in caso di validazione manuale dell’operatore sia in caso di validazione automatica (su input operatore) da parte dell’automa della piattaforma Dashboard MIC.
+GESTIONE ANOMALIA
+Nel caso in cui il sistema evidenzi l'assenza della data di validazione sul "pervenimento cartaceo", l'addetto provvede alla nuova validazione.
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+AIA
+VIS
+WINTAR
+PASS
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+085
+TITOLO
+Identificazione e gestione dell'anomalia
+DESCRIZIONE
+L'addetto deposita copia digitalizzata del modulo risultante errato a seconda dell'anomalia individuata sulla base dei controlli effettuati, su Sharepoint in cartelle differenti.
+Qui di seguito i nomi delle cartelle ed i criteri da utilizzare per l'allocazione dei documenti in formato digitale:
+. "scarti bonifici": iban assente o incompleto
+. "annullati": dati corrispondenti in presenza di modulo annullato
+. "doppioni": dati corrispondenti in presenza di modulo già validato 
+. "scarti privi di firma", qualora manchi una firma prevista
+. "scarti da reinvestimento", quando emerge una differenza tra l'importo incassato e quello pagato
+. "scarti autoesitati" nel caso in cui il sistema genera automaticamente dei moduli errati
+. "scarti vari", per tutte le altre tipologie di scarti non precedentemente classificati
+In presenza di una o più anomalie di cui sopra, l'addetto, utilizzando un format predefinito invia comunicazione alla RETE AGENZIALE o alla funzione AML affinché l’anomalia possa essere sanata.  
+La struttura, se necessario, resta in attesa di ricevere eventuale copia del documento rettificato a mezzo mail.
+Successivamente l'addetto aggiorna quotidianamente un file contenuto su Sharepoint, indicando il conteggio delle movimentazioni; allo stesso tempo lascia il cartaceo il modulo di identificazione viziato dalle anomalie sopra elencate in sospeso in attesa di ricevere indicazioni dalla funzione Antiriciclaggio o risposta da parte dell’Agenzia sull'operatività da adottare per la sanatoria dell’anomalia stessa.
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+090
+TITOLO
+Generazione e apposizione etichetta moduli cartacei
+DESCRIZIONE
+L'addetto procede alla generazione dell'etichetta da apporre alla documentazione
+cartacea; inserisce pertanto sul sistema GRMA SCAN una serie di dati:
+- Compagnia;
+- Selezione prodotto "Polizza vita" o "Vita AIA"
+- Tipo di documento (antiriciclaggio modulo di identificazione firmato);
+- Codice Agenzia;
+- Ramo;
+- Polizza.
+Inseriti i dati necessari, l'addetto stampa l'etichetta e l'appone sul modulo.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+GRMA SCAN
+DOCUMENTALE PORTAFOGLIO
+
+
+
+100
+TITOLO
+Scansione modulo e predisposizione invio per archiviazione moduli cartacei 
+DESCRIZIONE
+L'addetto scansiona il modulo e ripone il documento in originale in uno scatolone, che deve essere differente per Compagnia e la cui numerazione è progressiva e viene attribuita recuperando il numero da apporre consultando un file (Registro Archiviazione Pacchi) condiviso con la funzione Antiriciclaggio e presente su Sharepoint.
+Sulla scatola viene apposto il numero, la compagnia, la tipologia di documento, il periodo cui si riferiscono i documenti inseriti e l'anno in cui possono essere inviati al macero.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+110
+TITOLO
+Ritiro documenti e archiviazione
+DESCRIZIONE
+L'addetto, secondo la cadenza concordata, recupera gli scatoloni e gli archivia per il periodo di tempo indicato sul plico.
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+FORNITORE
+APPLICATIVO INFORMATICO
+-
+
+
+
+140
+TITOLO
+Gestione file e schede sospese ITALIANA 
+DESCRIZIONE
+L’addetto riceve quotidianamente l’estrazione automatica da sistema delle schede sospese, crea e compila un file da lavorare contenente l’estrazione delle posizioni sospese da gestire (suddivisione mensile) e lo aggiorna quotidianamente con l’inserimento nel gruppo Teams
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+PASS
+WINTAR
+
+150
+TITOLO
+Verificare posizioni sospese
+DESCRIZIONE
+Le posizioni sospese si differenziano in più categorie:
+   -       Sospeso iban non presente
+   -       Sospeso assegno
+   -       Sospeso terzo pagatore
+   -       Sospeso terzo pagatore agente
+   -       Sospeso Broker
+   -       Sospeso AML Direzione
+L'addetto esegue controllo, sull'applicativo dedicato, della posizione segnalata procedendo alla risoluzione della stessa effettuando passaggi differenziati a seconda della tipologia di Sospeso.
+Se non vengono riscontrate anomalie si procede con la chiusura del sospeso tramite convalida sull'apposito applicativo e aggiornamento della chiusura del sospeso sul relativo file.
+A distanza di due giorni l’addetto verifica che le posizioni lavorate e convalidate siano state trasferite automaticamente sul relativo software 
+GESTIONE ANOMALIA
+L'addetto, verificato che la posizione necessita di ulteriori dati da parte di altri interlocutori (Agenzie, Uffici Direzionali di Compagnia), provvede ad invio mail agli stessi richiedendo integrazioni/precisazioni; procede ad aggiornamento del sospeso sull'apposito file. 
+Successivamente l’addetto aggiorna quotidianamente il file, e a seguito di risposta da parte dei soggetti interessati, procede a convalida sul software dedicato e ad aggiornamento della chiusura del sospeso sul relativo file.
+ La funzione può verificare in tempo reale le avvenute lavorazioni e convalide.
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+PASS
+WINTAR
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+160
+TITOLO
+Gestione file Comparazione (RMA+ITA) e file Omesse Agenzia 259 (Dipendenti RMA) e GERENZE/BROKER (RMA)
+DESCRIZIONE
+L’addetto procede mensilmente al recupero dei file necessari all’elaborazione della comparazione su apposite cartelle condivise (file contenenti la comparazione per modulo incassi, mandati e omesse). L’addetto estrae i moduli ATTESI NON REGISTRATI e OMESSE e procede alla lavorazione
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+AIA
+PASS
+WINTAR
+DOCUMENTALE PORTAFOGLIO
+VIS
+
+170
+TITOLO
+Verificare posizioni mancanti 
+DESCRIZIONE
+L’addetto esegue il controllo della presenza dell’operazione sull’applicativo utilizzato. Se non riscontra anomalie procede con la validazione tramite la conferma e l’aggiornamento sul relativo file.
+GESTIONE ANOMALIA
+L’addetto, verificata la mancanza dell’operazione sull’applicativo utilizzato, invia una mail all’Agenzia di riferimento/Uffici Direzionali di Compagnia chiedendo l’invio di apposita modulistica e/o delle informazioni necessarie all’inserimento dell’operazione nell’applicativo utilizzato con aggiornamento della posizione sul file dedicato.
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+DOCUMENTALE PORTAFOGLIO
+VIS
+WINTAR
+AIA
+PASS
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+
+
+180
+TITOLO
+Verificare presenza errati da caricamento
+DESCRIZIONE
+L’Addetto esegue tramite apposita funzione sull’applicativo dedicato, la ricerca di posizioni viziate da errori che impediscono il corretto invio in Archivio Unico Informatico.
+GESTIONE ANOMALIA
+L’addetto, riscontrata la presenza di posizioni in stato “Errati da Caricamento” e/o “Errati” procede con la correzione degli stessi mediante reperimento dei dati corretti sugli applicativi gestionali e/o tramite ricezione di appositi riscontri da parte della rete Agenziale. 
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+WINTAR
+AIA
+DOCUMENTALE PORTAFOGLIO
+VIS
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+185
+TITOLO
+Elaborazione dischetto Infostat UIF
+DESCRIZIONE
+L'addetto elabora i dati aggregati contenuti nel dischetto Infostat UIF.
+ALTRO STRUMENTO
+-
+ESECUTORE
+ADMINISTRATION ANTI MONEY LAUNDERING PROCUREMENT ITALY - Office
+APPLICATIVO INFORMATICO
+WINTAR
+
+
+
+

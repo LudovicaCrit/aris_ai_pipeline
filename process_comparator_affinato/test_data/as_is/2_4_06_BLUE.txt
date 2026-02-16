@@ -1,0 +1,275 @@
+convert /mnt/user-data/uploads/2_4_06_BLUE_Gestione_lavorazione_beneficiario.doc as a Writer document -> /tmp/tmp5k07qlni/2_4_06_BLUE_Gestione_lavorazione_beneficiario.txt using filter : Text
+﻿Flusso di processo
+
+2.4.06.BLUE Gestione lavorazione beneficiario
+Macroprocesso
+
+2.BLUE PROCESSI DI BUSINESS
+Processo
+
+2.4.BLUE SERVIZI AMMINISTRATIVI
+Sottoprocesso
+
+-
+Periodicità di esecuzione
+
+
+Owner
+
+SERVIZI AMMINISTRATIVI
+App senza presidio IT
+
+
+Recovery Point Objective
+
+Fascia 1
+Recovery Time Objective
+
+
+
+
+
+Data ultimo aggiornamento
+
+Aug 11, 2025, 4:27:54 PM
+
+Svolto per Reale Mutua
+No
+
+Svolto per Italiana
+Si
+
+Svolto per Blue Assistance
+No
+
+Svolto per Banca Reale
+No
+
+Svolto per Reale Immobili
+No
+
+Svolto per Reale Seguros
+No
+
+Svolto per Reale Vida
+No
+
+Svolto per ITES
+No
+
+Svolto per Compagnia Extragruppo
+No
+
+Svolto per Reale Chile
+No
+
+Svolto per Reale Foundation
+No
+
+Svolto per BHC
+No
+
+Svolto per Reale International
+No
+
+Svolto per Reale Ites Esp
+No
+
+Svolto per Italnext
+No
+
+Svolto per Ydrogios
+No
+
+Svolto per Reale Immobili Esp
+No
+
+
+
+
+
+Dati trattati
+
+
+Riservatezza
+
+Non compilato
+Integrità
+
+Non compilato
+Disponibilità
+
+Non compilato
+Affidabilità
+
+Non compilato
+Privacy
+
+Non compilato
+
+
+Codice
+Attività
+Attività
+Codice
+Controllo
+Controllo
+010
+TITOLO
+Verifica presenza beneficiario individuato
+DESCRIZIONE
+Vi sono intermediari autorizzati dalla Direzione a non trasmettere via flusso alcuni dati, obbligatori post rilascio Gianos4D, relativamente ai beneficiari individuati dalle sottoscrizioni di nuove proposte vita.
+L'addetto verifica su apposito applicativo la presenza di tracce che devono essere lavorate ed eventualmente integrate con i dati obbligatori mancanti.
+Tali integrazioni sono necessarie solo in presenza di uno o più beneficiari individuati.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+AIA
+
+
+
+020
+1A - Beneficiario presente
+TITOLO
+Data entry beneficiario
+DESCRIZIONE
+L'addetto verifica sull'applicativo dedicato che il beneficiario o l’eventuale titolare effettivo sia censito: se è presente, i dati da integrare in AIA sono recuperabili in parte da tale applicativo. 
+L’addetto deve altresì verificare, su apposito applicativo dell’Antiriciclaggio dedicato, se il soggetto riveste o meno delle cariche pubbliche e se la sua figura è annoverata tra i PEP (Persone Esposte Politicamente) o i PIL (Politici Italiani Locali). L’eventuale presenza o assenza di tali cariche dovrà essere censita in AIA.
+In caso di beneficiario persona giuridica recuperare i dati da integrare dalla visura camerale consultabile su CERVED.
+
+ 
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+AIA
+COMMA CHECK-IN
+ANAGRAFICA UNICA CENTRALIZZATA
+
+
+
+030
+TITOLO
+Salvataggio dati e cambio stato
+DESCRIZIONE
+Una volta che la Direzione Vita fornisce i dati e li inserisce all'interno delle Note operative, l'addetto effettua il loro salvataggio, modificando lo stato (“da caricare” a “da valutare”).
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+AIA
+
+035
+TITOLO
+Verificare corretto caricamento dati
+DESCRIZIONE
+Prima della registrazione del contratto la Direzione Vita controlla che tutti i campi obbligatori siano correttamente compilati.
+GESTIONE ANOMALIA
+Qualora dei campi non siano correttamente compilati vengono richieste ulteriori integrazioni a Blue.
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+RESPONSABILE UFFICIO COMPETENTE AREA VITA
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+040
+TITOLO
+Censimento beneficiario
+DESCRIZIONE
+Vi sono intermediari autorizzati dalla Direzione a non trasmettere alcuni dati che per i sistemi di compagnia sono obbligatori in caso di variazioni del beneficiario designato individuato.
+A tal fine sono obbligatorie per gli intermediari la compilazione e la trasmissione della richiesta di variazione e dell’Allegato M “Questionario per l’identificazione e l’adeguata verifica del beneficiari/o in sede di variazione o designazione”.
+L'addetto verifica su apposito applicativo che il beneficiario o l’eventuale titolare effettivo sia censito: se è presente, i dati da integrare sono recuperabili in parte da tale applicativo o sono disponibili sulla richiesta di variazione e sull’allegato M; se mancanti, i dati da integrare sono forniti dalla Direzione vita ed indicati nelle Note Operative.
+Se l’anagrafica non è presente è necessario crearla ex novo su applicativo dedicato.
+L’addetto deve altresì verificare, su apposito applicativo dell’Antiriciclaggio dedicato, se il soggetto riveste o meno delle cariche pubbliche e se la sua figura è annoverata tra i PEP (Persone Esposte Politicamente) o i PIL (Politici Italiani Locali). L’eventuale presenza o assenza di tali cariche dovrà essere censita in AIA.
+In caso di beneficiario persona giuridica recuperare i dati da integrare dalla visura camerale consultabile su CERVED.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+AIA
+COMMA CHECK-IN
+ANAGRAFICA UNICA CENTRALIZZATA
+
+045
+TITOLO
+Verificare censimento
+DESCRIZIONE
+L'addetto verifica su apposito applicativo che il beneficiario o l’eventuale titolare effettivo sia censito: se è presente, i dati da integrare sono recuperabili in parte da tale applicativo o sono disponibili sulla richiesta di variazione e sull’allegato M; se mancanti, i dati da integrare sono forniti dalla Direzione vita ed indicati nelle Note Operative.
+Se l’anagrafica non è presente è necessario crearla ex novo su applicativo dedicato.
+L’addetto deve altresì verificare, su apposito applicativo dell’Antiriciclaggio dedicato, se il soggetto riveste o meno delle cariche pubbliche e se la sua figura è annoverata tra i PEP (Persone Esposte Politicamente) o i PIL (Politici Italiani Locali). L’eventuale presenza o assenza di tali cariche dovrà essere censita in AIA.
+In caso di beneficiario persona giuridica recuperare i dati da integrare dalla visura camerale consultabile su CERVED.
+-
+ALTRO STRUMENTO
+-
+TIPO
+-
+SCOPO
+-
+PERIODICITA'
+-
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+AIA
+COMMA CHECK-IN
+ANAGRAFICA UNICA CENTRALIZZATA
+EFFICACIA DEL CONTROLLO
+-
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+050
+TITOLO
+Variazione beneficiario e salvataggi dati
+DESCRIZIONE
+L'addetto effettua sull'applicativo dedicato l’operazione di variazione del beneficiari/o: provvede ad eliminare il beneficiario già presente in polizza, inserisce i nuovi beneficiari individuati con assegnazione della percentuale della quota parte ed integra i dati obbligatori per l’applicativo.
+In caso di polizze multiramo il procedimento è da ripetere anche per la polizza accessoria.
+Successivamente l'addetto effettua il salvataggio dell’operazione di variazione e rileva il profilo di rischio antiriciclaggio segnalato dall’applicativo.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+AIA
+
+
+
+060
+TITOLO
+Condivisione avvenuto data entry
+DESCRIZIONE
+L'addetto compila il file xls condiviso con la Direzione Vita di Italiana indicando le lavorazioni effettuate ed eventuali note.
+ALTRO STRUMENTO
+File Excel
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+

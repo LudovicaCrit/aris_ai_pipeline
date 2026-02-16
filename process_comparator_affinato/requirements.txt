@@ -1,0 +1,17 @@
+# Process Comparator Dependencies
+
+# Core LangChain
+langchain>=0.1.0
+langchain-core>=0.1.0
+
+# LLM Providers (install the one you need)
+langchain-google-genai>=1.0.0  # For Google AI (Gemini)
+# langchain-openai>=0.1.0       # Uncomment for OpenAI
+# langchain-anthropic>=0.1.0    # Uncomment for Anthropic
+
+# Document processing
+# antiword (system package, install via apt)
+# pandoc (system package, install via apt)
+
+# Node.js docx library (install via npm)
+# npm install -g docx

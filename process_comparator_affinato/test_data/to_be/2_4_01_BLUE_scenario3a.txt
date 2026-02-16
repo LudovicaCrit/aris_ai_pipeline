@@ -1,0 +1,267 @@
+convert /mnt/user-data/uploads/2_4_01_BLUE_Gestione_moduli_di_adeguata_verifica.doc as a Writer document -> /tmp/tmp88dvaqmm/2_4_01_BLUE_Gestione_moduli_di_adeguata_verifica.txt using filter : Text
+﻿Flusso di processo
+
+2.4.01.BLUE Gestione moduli di adeguata verifica
+Macroprocesso
+
+2.BLUE PROCESSI DI BUSINESS
+Processo
+
+2.4.BLUE SERVIZI AMMINISTRATIVI
+Sottoprocesso
+
+-
+Periodicità di esecuzione
+
+Ad evento
+Owner
+
+SERVIZI AMMINISTRATIVI
+App senza presidio IT
+
+
+Recovery Point Objective
+
+Fascia 1
+Recovery Time Objective
+
+
+
+
+
+Data ultimo aggiornamento
+
+Aug 11, 2025, 4:24:43 PM
+
+Svolto per Reale Mutua
+Si
+
+Svolto per Italiana
+Si
+
+Svolto per Blue Assistance
+No
+
+Svolto per Banca Reale
+No
+
+Svolto per Reale Immobili
+No
+
+Svolto per Reale Seguros
+No
+
+Svolto per Reale Vida
+No
+
+Svolto per ITES
+No
+
+Svolto per Compagnia Extragruppo
+No
+
+Svolto per Reale Chile
+No
+
+Svolto per Reale Foundation
+No
+
+Svolto per BHC
+No
+
+Svolto per Reale International
+No
+
+Svolto per Reale Ites Esp
+No
+
+Svolto per Italnext
+No
+
+Svolto per Ydrogios
+No
+
+Svolto per Reale Immobili Esp
+No
+
+
+
+
+
+Dati trattati
+
+
+Riservatezza
+
+4
+Integrità
+
+5
+Disponibilità
+
+5
+Affidabilità
+
+5
+Privacy
+
+PERSONALI SENSIBILI
+
+
+Codice
+Attività
+Attività
+Codice
+Controllo
+Controllo
+010
+TITOLO
+Ricezione e classificazione
+DESCRIZIONE
+La persona incaricata riceve il Modulo di Adeguata Verifica della Clientela attraverso tre modalità differenti:
+- posta interna: l'agenzia, in fase di incasso del premio o di riscatto, invia il modulo all'ufficio Posta, il quale lo riceve e, osservando l'intestazione della busta che riporta la scritta "Modulo di adeguata verifica", invia il tutto all'ufficio Servizi Amministrativi, che appone con un timbro la data pervenimento in Blue Assistance;
+- estrazione file con elenco moduli automatici da Agenzia Digit da verificare;
+- tramite mail.
+
+Il documento può essere compilato dall'agenzia in maniera informatizzata o manuale.
+ 
+Qualora la persona incaricata riceva un modulo di adeguata verifica "rafforzata" o altri documenti classificati come "adeguata verifica" che l'agenzia invia erroneamente, Blue non lavora tale documentazione, ma inoltra la stessa all'ufficio Antiriciclaggio se di sua competenza; se di competenza di altri uffici, la persona incaricata invia a mezzo posta interna la documentazione all'ufficio Posta, di Reale o di Italiana, che la inoltrerà al corretto destinatario.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+020
+TITOLO
+Avvio lavorazione moduli cartacei
+DESCRIZIONE
+La persona incaricata consulta il modulo pervenuto e verifica la completezza delle informazioni necessarie per procedere con la successiva lavorazione.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+030
+TITOLO
+Verificare presenza su portale documentale
+DESCRIZIONE
+La persona incaricata si collega all'applicativo e verifica la presenza per ogni posizione assicurativa del modulo esogeno, ovvero con tutte le firme necessarie presenti, , per poi procedere con un controllo sui dati.
+La persona incaricata, in presenza di modulo corretto, effettua l’archiviazione a documentale, compila il file "AVC da Corrispondenza" condiviso con la funzione Antiriciclaggio e poi ne predispone l'invio al macero.
+GESTIONE ANOMALIA
+Se durante il controllo dei moduli sul cliente l'addetto riscontra anomalie, provvede ad effettuare una comunicazione all'agenzia per richiedere la compilazione o la correzione del documento; la prima comunicazione e gli eventuali tre solleciti successivi sono sempre gestiti da Blue, gli eventuali ulteriori solleciti vengono invece inviati dall'ufficio antiriciclaggio preposto.
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+ANTIRICICLAGGIO - Ufficio
+APPLICATIVO INFORMATICO
+DOCUMENTALE PORTAFOGLIO
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+040
+TITOLO
+Avvio lavorazione estrazione campione
+DESCRIZIONE
+La persona incaricata consulta il file e verifica la completezza delle informazioni necessarie per procedere con la successiva lavorazione.
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+050
+TITOLO
+Verificare presenza su portale documentale
+DESCRIZIONE
+Con cadenza giornaliera/bisettimanale le Funzioni Antiriciclaggio depositano sulla cartella condivisa un'estrazione contenente tutte le emissioni/cambi di contraenza effettuate nel giorno di riferimento.
+Tali dati vengono importati dalla persona incaricata sul file Digit.
+La persona incaricata si collega all'applicativo e verifica la presenza per ogni posizione assicurativa indicata nel file del modulo esogeno, ovvero con tutte le firme necessarie presenti, e i documenti di identità del contraente, esecutore e titolare/i effettivo/i.
+In caso di contraente-persona giuridica, l’addetto è tenuto a verificare la presenza sul portale documentale della visura camerale aggiornata (emessa da non più di sei mesi).
+La persona incaricata, in presenza della documentazione completa e corretta, procede al controllo dei dati, con particolare riferimento alla corretta individuazione del titolare effettivo.
+Se la persona incaricata non rileva anomalie/errori, compila il file Digit inserendo l'esito della lavorazione effettuata.
+Per le posizioni in capo a persone giuridiche, l’esito della lavorazione effettuata è inserito su un report, inviato mensilmente, al termine dei tre solleciti, alla Funzione Antiriciclaggio.
+GESTIONE ANOMALIA
+Laddove i documenti non siano presenti o non siano aggiornati, la persona incaricata ne richiede il caricamento all’agenzia.
+Nel caso in cui il modulo presenti degli errori o sia privo delle firme, l'addetto lo segnala all'agenzia competente che provvede alle rettifiche/integrazioni richieste.
+Laddove la persona incaricata rilevi la mancanza della documentazione societaria di supporto, in caso di visura camerale la richiede su Cerved, archiviandola in ultimo a portale; in caso di documentazione diversa (es. atto costitutivo), la richiede all’agenzia.
+Laddove la persona incaricata rilevi errori sulla corretta individuazione del titolare effettivo, richiede all’agenzia la compilazione di un nuovo questionario in modalità stand-alone al fine di correggere i dati errati presenti su Gianos.
+Il questionario così emesso dovrà essere sottoposto a firma del cliente e del rilevatore, infine archiviato dall’agenzia sul portale documentale.
+La prima comunicazione e gli eventuali tre solleciti successivi sono sempre gestiti da Blue, gli eventuali ulteriori solleciti vengono invece inviati dall'ufficio antiriciclaggio preposto.
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+COMPLIANCE - Ufficio
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+060
+2A - Polizza emessa con EDIWEB
+
+TITOLO
+Controllo e registrazione modulo manuale su applicativo
+DESCRIZIONE
+La persona incaricata, non trovando il documento endogeno, provvede a registrare il modulo corretto  sull'apposito applicativo, richiamando la polizza ed inserendo i dati a sistema.  
+Successivamente provvede all’archiviazione mediante il tasto ‘allega’.
+Successivamente, tramite un flusso batch, le informazioni vengono trasferite in modo automatico all'applicativo utilizzato dalla funzione antiriciclaggio per i controlli di comparazione (Gianos).
+ALTRO STRUMENTO
+-
+ESECUTORE
+SERVIZI AMMINISTRATIVI TEAM 1 - Ufficio
+APPLICATIVO INFORMATICO
+DOCUMENTALE PORTAFOGLIO
+EDI WEB
+
+
+
+070
+2B - Polizza emessa con PASS MOBILE
+TITOLO
+Controllo modulo manuale e verifica presenza dati
+DESCRIZIONE
+La persona incaricata, in presenza di un modulo compilato manualmente relativo ad una polizza del portafoglio AIA, in prima battuta verifica se il questionario è presente in Gianos.
+Se presente, verifica che i dati coincidano con quanto indicato sul questionario manuale e provvede ad archiviare a portale la copia firmata.
+Se non presente, provvede a compilare il questionario direttamente in Gianos, archiviando a portale la copia firmata.
+La persona incaricata provvede infine a compilare un file condiviso con la Funzione, inserendo l’id Gianos della registrazione effettuata.
+ALTRO STRUMENTO
+-
+ESECUTORE
+CONTROLLO INTERNO - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+

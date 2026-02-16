@@ -1,0 +1,1456 @@
+convert /mnt/user-data/uploads/2_2_2_17_RE_Infortuni_Malattie_individuali_-_Assunzione_prodotti.doc as a Writer document -> /tmp/tmpedqgciw2/2_2_2_17_RE_Infortuni_Malattie_individuali_-_Assunzione_prodotti.txt using filter : Text
+﻿Flusso di processo
+
+2.2.2.17 RE Infortuni Malattie individuali - Assunzione prodotti
+Macroprocesso
+
+2 PROCESSI DI BUSINESS
+Processo
+
+2.2 Assunzione
+Sottoprocesso
+
+2.2.2 Assunzione prodotti Danni Reale Mutua
+Periodicità di esecuzione
+
+Ad evento
+Owner
+
+CONSULENZA  RETAIL - Responsabile
+App senza presidio IT
+
+
+Recovery Point Objective
+
+Fascia 3
+Recovery Time Objective
+
+
+
+
+
+Data ultimo aggiornamento
+
+Sep 12, 2025, 11:48:20 AM
+
+Svolto per Reale Mutua
+Si
+
+Svolto per Italiana
+No
+
+Svolto per Blue Assistance
+No
+
+Svolto per Banca Reale
+No
+
+Svolto per Reale Immobili
+No
+
+Svolto per Reale Seguros
+No
+
+Svolto per Reale Vida
+No
+
+Svolto per ITES
+No
+
+Svolto per Compagnia Extragruppo
+No
+
+Svolto per Reale Chile
+No
+
+Svolto per Reale Foundation
+No
+
+Svolto per BHC
+No
+
+Svolto per Reale International
+No
+
+Svolto per Reale Ites Esp
+No
+
+Svolto per Italnext
+No
+
+Svolto per Ydrogios
+No
+
+Svolto per Reale Immobili Esp
+No
+
+
+
+
+
+Dati trattati
+
+
+Riservatezza
+
+3
+Integrità
+
+2
+Disponibilità
+
+2
+Affidabilità
+
+2
+Privacy
+
+PERSONALI SENSIBILI
+
+
+Codice
+Attività
+Attività
+Codice
+Controllo
+Controllo
+010
+TITOLO
+Raccolta delle esigenze e compilazione documentazione
+DESCRIZIONE
+L'agente/gerente attiva la procedura di emissione di una polizza individuale infortuni/malattia nel momento in cui il contraente si reca in agenzia ed esprime la volontà di sottoscrivere tale assicurazione oppure acquisisce dal broker le informazioni necessarie alla valutazione del bene o dell'attività da assicurare ed alla tariffazione del rischio, in funzione del prodotto proposto e delle garanzie scelte dal cliente.
+L'agente/gerente (se tramite broker) deve acquisire dal cliente i seguenti dati: nome e cognome, codice fiscale, indirizzo di residenza, luogo e data di nascita, numero e scadenza del documento di identità.
+Nel caso in cui il cliente non avesse ancora provveduto a compilare il modulo relativo al consenso sul trattamento dei dati personali di Compagnia (Privacy), l'addetto di Agenzia provvede a regolarizzare la posizione. Il documento viene quindi sottoscritto dal cliente in duplice copia e consegnato all'Agente.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+PUNTO-WEB
+(ex PUNTO NET)
+
+020
+TITOLO
+Valutare il rispetto delle politiche assuntive della Compagnia
+DESCRIZIONE
+Il gerente/Agente analizza le caratteristiche del rischio al fine di valutare se lo stesso rientri nelle policy assuntive della Compagnia.
+ In caso di esito positivo procede con la raccolta degli elementi necessari alla quotazione.
+GESTIONE ANOMALIA
+Qualora le caratteristiche del rischio non rispettino le policy assuntive della Compagnia, il gerente/Agente comunica al broker che la quotazione non può essere effettuata.
+ALTRO STRUMENTO
+-
+TIPO
+-
+SCOPO
+-
+PERIODICITA'
+-
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+-
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+030
+TITOLO
+Invio richiesta supporto
+DESCRIZIONE
+Nel caso in cui si verifichi un errore informatico che impedisca di completare l'emissione di uno specifico prodotto, oppure una mancanza di linea del sistema, e il perfezionamento della polizza non possa essere rimandato, l'addetto richiede specifico supporto alla direzione, che valuterà come procedere.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+ISAAC
+
+
+
+040
+TITOLO
+Caricamento a sistema dati anagrafici
+DESCRIZIONE
+L’agente/gerente accede all'applicativo e inserisce il codice fiscale del cliente. Il sistema si collega automaticamente all'Anagrafica Unica Centralizzata per verificare un eventuale precedente censimento. 
+Nel caso in cui il sistema non riscontri l’esistenza del nominativo, l’agente/gerente compila i campi relativi ai dati anagrafici del cliente e dell’assicurato sull’applicativo di gestione delle anagrafiche. Completato l’inserimento, l’agente accede nuovamente all’applicativo di emissione polizze e, digitando il codice fiscale, recupera i dati caricati.
+Nel caso in cui la ricerca evidenzi l'esistenza dei dati del cliente, tali dati vengono importati automaticamente a sistema.
+Nel caso in cui il cliente non avesse ancora compilato e sottoscritto l'informativa privacy aggiornata l'addetto di Agenzia provvede a regolarizzare la posizione.
+Successivamente, l'applicativo verifica la completezza e la correttezza dei dati inseriti / importati.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+ANAGRAFICA UNICA CENTRALIZZATA
+CRM ASSICURATIVO (DYNAMICS)
+APP AGENTI
+PASS
+
+050
+TITOLO
+Verificare la correttezza/coerenza dati anagrafici
+DESCRIZIONE
+L'applicativo ripercorre i campi inseriti dall'agente ed effettua una verifica di completezza e coerenza dei dati inseriti.
+GESTIONE ANOMALIA
+Qualora l'applicativo rilevasse la presenza di errori o l'incompletezza dei dati, avvisa la persona incaricata tramite un alert ed il blocco delle schermate successive; l’agente/gerente provvederà ad alimentare i campi mancanti o non corretti.
+In particolare vengono segnalati i seguenti casi:
+- se uno o più campi obbligatori non sono stati compilati;
+- un'eventuale incongruenza tra i dati necessari all’identificazione del cliente (codice fiscale – nome e cognome del cliente; luogo e data di nascita; scadenza del documento d’identità;…).
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+PASS
+APP AGENTI
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+060
+TITOLO
+Compilazione Questionari di valutazione delle richieste ed esigenze del Contraente
+DESCRIZIONE
+Completato l’inserimento dei dati anagrafici e, dove necessario, completato il flusso di proposta di polizza, prima di procedere all’emissione del contratto l’intermediario intervista il cliente al fine di compilare il Questionario di valutazione delle richieste ed esigenze del Contraente, in ottemperanza a quanto previsto dal Regolamento IVASS n° 40/2018.
+Se il processo avviene utilizzando l’applicativo che contiene il questionario integrato nel flusso di emissione del contratto, l’intermediario accede alla sezione dedicata dell’applicativo preposto, sceglie il prodotto desiderato, inserisce i dati nella proposta di polizza e al fondo del flusso sottopone il questionario al potenziale Contraente, raccogliendone le richieste ed esigenze assicurative e verificando la coerenza del contratto proposto rispetto alle stesse.
+Se invece la polizza viene emessa utilizzando un applicativo che non contiene il questionario integrato nel flusso, prima di procedere con tale attività l’intermediario accede alla sezione dedicata dell’applicativo preposto all’emissione del questionario di valutazione richieste ed esigenze del Contraente e, dopo aver selezionato l’anagrafica, sceglie il questionario relativo al prodotto che il cliente intende acquistare, raccoglie le richieste ed esigenze assicurative del cliente e ne verifica la coerenza rispetto alla proposta di polizza.
+Il potenziale contraente ha l’obbligo di rispondere a tutte le domande per quanto riguarda i questionari specifici di prodotto (ad hoc) e l’obbligo di rispondere alle domande attinenti al prodotto che intende acquistare per quanto riguarda i questionari generici o di famiglia di prodotto. 
+Non è consentita la vendita di un contratto che risulti non coerente con le richieste ed esigenze espresse dal Contraente nel questionario di valutazione. 
+A completamento dell’attività, l’intermediario stampa (in modalità cartacea o digitale) il questionario, lo sottopone alla firma del cliente e gliene consegna una copia unitamente al resto della documentazione contrattuale; una copia del questionario deve essere archiviata nella repository documentale del contratto.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+PPEVO
+APP AGENTI
+
+070
+TITOLO
+Verificare la coerenza tra le richieste ed esigenze del Contraente e la proposta di polizza
+DESCRIZIONE
+Il sistema, al termine della compilazione del Questionario di Valutazione delle Richieste ed Esigenze del Contraente, effettua le seguenti verifiche:
+- se il cliente non risponde ad una o più delle domande obbligatorie, non è possibile proseguire e il sistema evidenzia le risposte mancanti;
+- esclusivamente in caso di utilizzo dell’applicativo che contiene il questionario integrato nel flusso di emissione del contratto, sui questionari di alcuni prodotti specifici sono operanti appositi controlli di Target Market e di Coerenza che, dopo aver completato il questionario, verificano se il potenziale Contraente appartenga o meno al mercato di riferimento del prodotto e controllano la coerenza delle richieste ed esigenze espresse dal cliente nel questionario rispetto ai contenuti della proposta di polizza.
+ 
+GESTIONE ANOMALIA
+Nel caso in cui si attivi un controllo di Target Market e/o di Coerenza, l’applicativo mostra un messaggio con l’indicazione del controllo non superato. In questo caso l’intermediario può sanare l’anomalia modificando le risposte inserite nel questionario oppure i contenuti della proposta di polizza. 
+L’alert che evidenzia il controllo non superato non è bloccante, ma l’agente ha la possibilità di modificare il livello di severity dei controlli di Target Market e Coerenza sia per la propria utenza che per le utenze dei propri collaboratori, al fine di impedire l’emissione del contratto in presenza di controlli non superati.
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+APP AGENTI
+EFFICACIA DEL CONTROLLO
+-
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+075
+TITOLO
+Compilazione dei Questionari Sanitari
+DESCRIZIONE
+Per i prodotti per cui è prevista l'obbligatorietà di raccolta del Questionario Anamnestico, l'intermediario sottopone a ogni assicurato il questionario sanitario, che ha l'obbligo di rispondere a tutte le domande in maniera completa e esaustiva. 
+Questionario Dread Disease: deve essere raccolto esclusivamente in modalità cartacea. Una copia del questionario deve essere archiviata nella repository documentale del contratto.
+Questionario IPM e Malattia: La compilazione del questionario è prevista in modalità digitale sull'applicativo (stand alone o integrato dal flusso di emissione). La stampa e la firma del questionario sono consentite solo dopo l’emissione della polizza, in modalità tradizionale o digitale; il documento firmato digitalmente viene automaticamente inserito nel fascicolo contrattuale dopo l’emissione.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+PPEVO
+PASS
+PASS PORTAL
+
+080
+TITOLO
+Verificare questionario Dread Disease
+DESCRIZIONE
+L'intermediario effettua un controllo manuale del questionario cartaceo compilato dal cliente
+GESTIONE ANOMALIA
+In caso ci fossero delle patologie condizionanti l'intermediario invia, tramite l'applicativo di gestione richieste, alla persona incaricata dell'ufficio consulenza retail il questionario compilato per le opportune valutazioni.
+ALTRO STRUMENTO
+E-mail
+TIPO
+Manuale
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+ISAAC
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+
+
+090
+TITOLO
+Verificare questionario Malattia e IPM
+DESCRIZIONE
+Il sistema applicativo effettua un controllo automatico del questionario informatico inserito dall'agente.
+GESTIONE ANOMALIA
+Il sistema effettua un controllo automatico del questionario digitalizzato inserito dall'intermediario, attribuendo al questionario un determinato colore di semaforo: verde, se il rischio è gestibile in autonomia agenziale e rosso, se è necessario richiedere l’intervento della Direzione.  In quest’ultimo caso verrà segnalata la necessità di richiedere la valutazione e l'autorizzazione da parte della Direzione tramite l'applicativo di ticketing.
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+ISAAC
+PASS PORTAL
+PPEVO
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+100
+TITOLO
+Caricamento dati di polizza
+DESCRIZIONE
+La persona incaricata, dopo aver selezionato il prodotto richiesto dal/dalla cliente ed inserito l'intestatario/a della polizza, accede alla sezione dell'applicativo relativa ai dati tecnici ed inserisce i seguenti dati:
+- Frazionamento di polizza;
+- Data Effetto e Data Scadenza del contratto;
+- Coassicurazione (se la polizza prevede la ripartizione del rischio tra diverse Compagnie)
+- Indicizzazione, vincolo, rischio comune (si/no) ;
+- Uso Imposta (prevalorizzato con l'informazione "base", da modificare nel caso in cui il contratto debba essere emesso senza imposte);
+- Rescindibilità e Data Rescindibilità (campo da valorizzare solo in caso di contratto di durata poliennale con rescindibilità annuale);
+- Tacito rinnovo (si/no).
+In caso di rischio ubicato all'estero, la persona incaricata attiva inoltre il campo "Polizza LPS" e seleziona dall'elenco il Paese nel quale è ubicato il bene da assicurare.
+Successivamente accede alla sezione dei dati tecnici di polizza ed inserisce le garanzie, le somme assicurate e le eventuali clausole legate ad esse (esempio: modalità di liquidazione, franchigie, ecc).
+ALTRO STRUMENTO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+APP AGENTI
+PASS
+
+110
+TITOLO
+Verificare completezza dati, congruenza tra garanzie e/o clausole e rispetto limiti assuntivi
+DESCRIZIONE
+L'applicativo effettua dei controlli automatici sul corretto caricamento dei dati relativi al rischio da assicurare.
+In particolare viene verificata:
+- la correttezza di quanto dichiarato sul proprio stato di salute dall'assicurando; 
+- la completezza dei dati inseriti, variabile a seconda del prodotto selezionato;
+- la congruità tra le garanzie selezionate;
+- la congruità tra le garanzie e le clausole inserite;
+- la presenza del flag LPS, nel caso in cui sia stato selezionato un paese nel campo "ubicazione del rischio" diverso da Italia.
+In caso di esito positivo dei suddetti controlli, verifica che, per ciascuna garanzia selezionata, la somma assicurata inserita sia assicurabile in autonomia dall'agenzia.
+Se l'ubicazione del rischio è in Italia, i controlli di congruità sono positivi e le garanzie,/clausole/somme assicurate sono assicurabili in autonomia dall'agenzia, l'applicativo non attiva alcuna segnalazione ed autorizza la persona incaricata all'emissione del contratto.
+GESTIONE ANOMALIA
+Nel caso in cui :
+- i dati siano incompleti, 
+- siano presenti incongruenze tra le garanzie selezionate, o tra queste e le clausole inserite;
+- sia stato alimentato il campo "ubicazione del rischio" con un paese diverso da Italia ma non sia stato flaggato il campo "LPS"
+il sistema attiva un messaggio di errore e non consente la prosecuzione dell'attività di emissione fino a quando non viene ripristinata la situazione corretta.
+Nel caso in cui la composizione di polizza selezionata non sia assicurabile in autonomia dall'agenzia, il sistema emette, a seconda dei casi:
+-una segnalazione non bloccante (warning), nel caso in cui l'agente abbia inserito una garanzia/clausola/somma assicurata oltre i propri limiti; per poter proseguire, deve richiedere l'autorizzazione della Direzione.
+- una segnalazione bloccante (R.D.) nel caso in cui l'agente  abbia selezionato una garanzia/clausola/somma assicurata fuori dai limiti di trattato e/o abbia inserito il flag su L.P.S (rischio ubicato all'estero); per poter proseguire, deve richiedere l'autorizzazione della Direzione.
+Anche nei casi in cui la verifica delle risposte date al questionario dia esito negativo, il sistema segnala all'agente l'obbligo di richiedere l'autorizzazione in Direzione prima di procedere con l'emissione della polizza.
+N.B.: la richiesta di autorizzazione viene fatta a completamento di tutte le schermate (caricamento dati, quotazione del premio e applicazione dello sconto).
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+PASS
+APP AGENTI
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+120
+TITOLO
+Quotazione del premio
+DESCRIZIONE
+L'agente accede alla sezione della quotazione del premio, che viene calcolato automaticamente dall'applicativo in base alla composizione di polizza selezionata; il premio complessivo così visualizzato è già comprensivo di eventuali riduzioni calcolate automaticamente dal sistema in funzione delle regole previste sul prodotto (esempio: riduzione del premio in caso di abbinamento di determinate garanzie)
+ALTRO STRUMENTO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+PASS
+APP AGENTI
+
+
+
+130
+TITOLO
+Selezione dello sconto
+DESCRIZIONE
+L'agente accede alla sezione relativa allo sconto (per i prodotti sui quali tale funzionalità è abilitata) ed inserisce lo sconto commerciale desiderato.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+PASS
+APP AGENTI
+
+140
+TITOLO
+Verificare capienza importo flessibilità e/o sconto massimo
+DESCRIZIONE
+Per i prodotti inseriti nel Sistema di Flessibilità Commerciale - e per le sole agenzie in appalto - l'applicativo effettua un controllo dello sconto inserito dall'agente al fine di verificare che sia compatibile con i criteri di flessibilità commerciale assegnatigli per il prodotto che sta emettendo.
+Nel dettaglio l'applicativo verifica che:
+- l'importo di flessibilità commerciale sia sufficientemente capiente rispetto all'importo di sconto inserito sulla polizza;
+- lo sconto percentuale applicato sulla polizza non superi il limite assegnato all'agenzia sul prodotto al quale appartiene la polizza;
+Nel caso di riscontro positivo, il sistema non emette segnalazioni e l'agente può procedere con l'emissione della polizza.
+GESTIONE ANOMALIA
+Nel caso di riscontro negativo ad una o ad entrambe le condizioni descritte, il sistema visualizza una segnalazione non bloccante (warning) che avverte l'agenzia della necessità di richiedere autorizzazione all'ufficio assuntivo per il superamento dello sconto massimo o per l’esaurimento della dotazione di flessibilità.
+Solo nel caso in cui sia impossibile richiedere l'autorizzazione (sfasamenti di operatività oggettivi) e l'emissione della polizza non possa essere rimandata, l'agenzia può utilizzare appositi "Jolly" (assegnati in numero predefinito).
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+FLEXCOMM
+APP AGENTI
+PASS
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+150
+1B - Polizza non in autonomia dell'agenzia/di gerenza
+TITOLO
+Richiesta di autorizzazione in Direzione per polizza fuori autonomia agenziale
+DESCRIZIONE
+Se la polizza è emessa dall'agenzia, per i seguenti casi:
+- campo "Polizza LPS" attivato;
+-  limiti d'età, garanzie, clausole o somme assicurate che non rientrano nell'autonomia agenziale (segnalate dal sistema tramite warning o R.D.);
+- polizza malattia di un assicurato avente una patologia che la Guida Medica indica come fuori dalle competenze agenziali;
+ 
+l'agente, se intende mantenere invariata la composizione di polizza, richiede l'autorizzazione all'ufficio competente di Direzione tramite mail o tramite l’applicativo di gestione richieste.
+ 
+Se la polizza è emessa dalla gerenza, per i seguenti casi:
+- rischio da emettere in regime di L.P.S.;
+- limti di età, garanzie, clausole o somme assicurate che non rientrano nell'autonomia agenziale;
+- polizza malattia di un assicurato avente una patologia che la Guida Medica indica come fuori dalle competenze agenziali;
+il gerente richiede l'autorizzazione all'ufficio competente di Direzione tramite mail o tramite l’applicativo di gestione richieste.
+ 
+
+ 
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+RETE DI VENDITA
+APPLICATIVO INFORMATICO
+ISAAC
+
+
+
+160
+TITOLO
+Valutazione richiesta di deroga garanzie/clausole/ limiti
+DESCRIZIONE
+La persona incaricata riceve la richiesta dell’agente tramite l'applicativo di gestione richieste attribuendo direttamente all'assuntore prevalente dell'Area di riferimento l'attività.
+Inoltre, la persona incaricata effettua una valutazione della stessa dal punto di vista sia tecnico che commerciale.
+In particolare: 
+- analizza le condizioni di assicurabilità nel rispetto delle linee di politica assuntiva del settore, con riferimento a competenzario, circolari, tariffe, riscontri statistici, pratica assuntiva seguita in casi analoghi; 
+- valuta il contesto in cui è inserita la trattativa: posizione commerciale del/della contraente, andamento tecnico e dimensione del portafoglio dell'agenzia proponente, rapporti con il broker avente il ruolo di intermediario, ecc.; 
+- in caso di variazione/sostituzione di contratto in corso, verifica le condizioni presenti sulla polizza da variare/sostituire e l'andamento tecnico delle stesse.
+Per la polizza infortuni, se l'importo della copertura è superiore a 1.000.000 di euro, la persona incaricata valuta l'eventuale questionario finanziario per verificare che la situazione economica dell'assicurato giustifichi l'importo della copertura richiesto. 
+Per la polizza malattia, la persona incaricata verifica lo stato di salute del cliente analizzando le risposte presenti nel questionario anamnestico. In particolare, vengono analizzati: 
+- l'età, peso e statura dell'assicurato/a; 
+- eventuali difetti fisici congeniti; 
+- le consultazioni mediche effettuate in precedenza; 
+- eventuali malattie avute in passato; 
+- eventuale uso di sostanze stupefacenti; 
+- possibili ricoveri/interventi chirurgici; 
+- trasfusioni 
+- (solo in caso di surroga) il rapporto Sinistri/Premi per l'analisi della qualità dell'assicurato.  
+Qualora venga rilevata una patologia a rischio, la persona incaricata predispone una lista di accertamenti medici supplementari da far richiedere dall’agenzia all’assicurato; nel caso si rendesse opportuno, gli esiti degli esami sono sottoposti all'attenzione di un/una consulente medico al fine di supportare l'assuntore nella determinazione di una nuova valutazione prevedendo un limite di copertura tramite la contrattualizzazione delle esclusioni o gli scoperti opportuni.
+Nel caso in cui la persona incaricata lo ritenga necessario anche in relazione alle modifiche del normativo di RMA, la quotazione del premio viene effettuata avvalendosi del supporto dell'ufficio Sviluppo Offerta Salute.
+Per la polizza infortuni o malattia con rischio ubicato all'estero (flag su L.P.S.), la persona incaricata consulta il documento predisposto dall'ufficio incaricato dei rapporti con l'Estero, contenente le linee guida per l'assunzione dei rischi esteri, con l'obiettivo di verificare che la polizza possa essere emessa in regime di L.P.S da un punto di vista normativo.
+ 
+Se la richiesta dell'agenzia/della gerenza non contiene tutti gli elementi essenziali per effettuare la valutazione, la persona incaricata richiede i necessari approfondimenti al proponente tramite e-mail.
+Nel caso in cui la valutazione dia esito negativo, la persona incaricata non autorizza l’agente/il gerente ad emettere la polizza. 
+Nel caso in cui la valutazione sia positiva ma la richiesta superi la propria autonomia assuntiva, la persona incaricata sottopone la pratica al/alla proprio/a responsabile/dirigente per richiedere l’autorizzazione a procedere.
+ALTRO STRUMENTO
+File Excel
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+PASS
+ISAAC
+EDW
+RADAR 2.0
+
+170
+TITOLO
+Verificare ubicazione del rischio e ammissibilità dell' L.P.S.
+DESCRIZIONE
+La persona incaricata, facendo riferimento al manuale delle linee guida assuntive per i rischi esteri, effettua i seguenti controlli:
+-  verifica l'effettiva ubicazione del rischio all'Estero;
+- se il rischio è effettivamente ubicato all'estero, verifica che il Paese in cui si vuole assicurare il rischio sia compreso tra le nazioni autorizzate ad operare in regime di L.P.S., che comprendono tutti gli stati membri dello Spazio Economico Europeo (SEE).
+- se il Paese apparitene allo SEE, verifica che in tale paese sia presente un rappresentante fiscale.
+Nei casi particolarmente complessi, l'assuntore si avvale della consulenza dell'ufficio Estero.
+In caso di riscontro positivo a tutti i requisiti suindicati, la persona incaricata autorizza l'emissione della polizza in regime di L.P.S ed invia all'ufficio estero tutti i dati di polizza necessari per effettuare il calcolo delle tasse da erogare al Paese straniero.
+
+GESTIONE ANOMALIA
+Se il rischio è ubicato in Italia, la persona incaricata autorizza l'agente/il gerente ad emettere la polizza senza l'inserimento del flag di L.P.S.
+Se il rischio è ubicato in un Paese SEE privo del rappresentante fiscale, la persona incaricata richiede all'ufficio Estero di ricercare ed ingaggiare un rappresentante e, successivamente, di fornigli l'importo della tassa.
+Se il rischio è ubicato in un Paese Terzo (extra SEE), la persona incaricata non autorizza l'agente/il gerente ad emettere la polizza.
+
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+ISAAC
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+
+
+180
+TITOLO
+Controllo rischi punta e controllo sinistri gravi
+DESCRIZIONE
+L'unità organizzativa presidio rete di vendita trimestralmente esegue una verifica sui dati di portafoglio finalizzata a individuare le punte di rischio del mondo infortuni e l'esistenza dell'eventuale copertura riassicurativa.
+Trimestralmente viene anche eseguita un’analisi dei sinistri infortuni e malattia con somma pagata o liquidata superiore alla soglia prevista per verificare la correttezza della fase assuntiva.
+
+GESTIONE ANOMALIA
+Nel caso di anomalie è previsto un confronto con il responsabile del servizio per adottare le eventuali azioni correttive.
+ALTRO STRUMENTO
+E-mail
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Trimestrale
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+190
+TITOLO
+Invio richiesta calcolo imposte
+DESCRIZIONE
+Se è possibile emettere la polizza in regime di L.P.S, la persona incaricata procede a contattare l'ufficio di competenza trasmettendo una copia della proposta al fine di richiedere il calcolo delle tasse imposte da applicare al premio netto di polizza.
+
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+-
+
+
+
+200
+TITOLO
+Calcolo imposte su polizza L.P.S.
+DESCRIZIONE
+La persona incaricata accede all'applicativo dedicato e verifica preliminarmente che l'algoritmo di calcolo dell'imposta estera sia aggiornato alla normativa vigente. In caso affermativo, procede con l'inserimento dei dati della polizza, tra cui: il paese Estero in cui è ubicato il rischio, la tipologia di prodotto, l'importo del premio netto precedentemente fornito dall'ufficio assuntivo.
+Qualora il sistema di calcolo non sia aggiornato, la persona incaricata contatta l'ufficio IT competente per richiedere di modificare le aliquote / l'algoritmo di calcolo dell'imposta.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+RELAZIONI E AFFARI ESTERI - Ufficio
+APPLICATIVO INFORMATICO
+CALCOLO IMPOSTE ESTERE
+
+
+
+210
+TITOLO
+Comunicazione imposte
+DESCRIZIONE
+Effettuato il calcolo, la persona incaricata trasmette all'assuntore via e-mail il file Excel contenente il calcolo effettuato e l'importo delle tasse risultante, che dovrà essere inserito a sistema.
+Inoltre, nel caso in cui l'assuntore abbia richiesto di incaricare un rappresentante fiscale per poter emettere la polizza, la persona incaricata gestisce l'attività di ingaggio ed affidamento dell'incarico a quest'ultimo.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+RELAZIONI E AFFARI ESTERI - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+220
+TITOLO
+Verifica necessità riassicurazione
+DESCRIZIONE
+La persona incaricata, se il rischio presenta particolarità qualitative e/o quantitative (es: massimale elevato, garanzie atipiche) che superano i limiti del trattato riassicurativo, oppure è disciplinato da una normativa differente da quella prevista in trattato, avvia la procedura per la cessione in riassicurazione del rischio, che può avvenire attraverso due differenti modalità:
+1. accettazione speciale al trattato
+2. riassicurazione facoltativa.
+I vantaggi dell'accettazione speciale sono i seguenti:
+- è concessa a titolo gratuito;
+- necessita di sola segnalazione al riassicuratore e non di gestione amministrativa:
+- permette al rischio di godere delle condizioni economiche del trattato.
+Tuttavia vi sono casi particolari in cui:
+-  i rischi non possono essere ceduti ai trattati di riassicurazione obbligatoria;
+- si vuole separare la cessione del rischio in modo da non sbilanciare il risultato del trattato;
+- la natura dell’affare oggetto della cessione richiede il coinvolgimento di un riassicuratore che possiede una specifica esperienza in materia.
+Per questi casi la persona incaricata può ricorrere direttamente alla riassicurazione facoltativa, tramite ricerca diretta di un riassicuratore sul mercato.
+In generale, le linee guida dell'area Infortuni e Malattie prevedono in primis l'utilizzo di appositi trattati di riassicurazione già preimpostati (facility).
+ALTRO STRUMENTO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+-
+
+
+
+230
+TITOLO
+Predisposizione richiesta per accettazione speciale al trattato
+DESCRIZIONE
+La persona incaricata, qualora intenda ricorrere all’accettazione speciale al trattato, compila un apposito modulo presente nel "Manuale delle regole assuntive di Gruppo" che riepiloga i dettagli delle condizioni richieste e lo invia all'ufficio preposto alla gestione della riassicurazione.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+-
+
+
+
+240
+TITOLO
+Analisi della soluzione riassicurativa per accettazione speciale al trattato
+DESCRIZIONE
+Ricevuta la richiesta, l'addetto esamina il modulo, verificando che sia completo di tutte le informazioni necessarie al fine di richiedere l'accettazione speciale al trattato al riassicuratore e inoltra la richiesta.
+Ottenuta l'approvazione da parte del riassicuratore, l'addetto:
+- invia comunicazione all'ufficio assuntivo che autorizza l'agenzia/la gerenza ad emettere la polizza tramite caricamento delle condizioni assuntive previste sull'apposito applicativo;
+- archivia la documentazione;
+- aggiorna i contenuti e le informazioni sull’applicativo di riferimento.
+In caso contrario, invia comunicazione del rifiuto all'ufficio assuntivo.
+ALTRO STRUMENTO
+-
+ESECUTORE
+REINSURANCE BUSINESS - Office
+APPLICATIVO INFORMATICO
+SICS
+
+
+
+250
+TITOLO
+Predisposizione richiesta trattato facoltativo
+DESCRIZIONE
+In caso di rifiuto di accettazione speciale al trattato, o in presenza dei casi particolari precedentemente elencati, l'addetto dell'ufficio assuntivo si avvale della riassicurazione facoltativa.
+La procedura prevede che la persona incaricata contatti direttamente il mercato riassicurativo, ponendo particolare attenzione:
+- alla solidità della Compagnia di Riassicurazione,
+- a privilegiare un rapporto diretto con il Riassicuratore;
+- a collocare presso riassicuratori continentali.
+A tale scopo consulta una tabella presente sulla Intranet Aziendale contenente l'elenco dei riassicuratori che rispondono alle richieste sopra citate; successivamente, l'addetto invia la richiesta a più di un riassicuratore al fine di valutare l'offerta migliore. In caso di necessità l'addetto contatta l'ufficio riassicurazione per richiedere consulenza nella scelta del riassicuratore.
+Accettata l'offerta ritenuta migliore, l'addetto procede con il caricamento e l'invio dell'autorizzazione all'agente. 
+ALTRO STRUMENTO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+-
+
+
+
+260
+TITOLO
+Caricamento ed invio autorizzazione
+DESCRIZIONE
+La persona incaricata invia tramite ISAAC all’agente/gerente i termini dell'autorizzazione all'emissione della polizza.
+Nell'autorizzazione viene inserita la motivazione che ha portato alla concessione della deroga ed il riepilogo della proposta (garanzie, importo del premio, somme assicurate, eventuali clausole particolari); se la polizza è in LPS, fornisce anche in allegato il file Excel contenente l'importo delle tasse da inserire a sistema.
+Per la polizza malattia, in relazione alle considerazioni emerse in fase di analisi, la persona incaricata predispone ed allega all'autorizzazione un documento che riporta la definizione delle clausole di esclusione / scoperto e copia dell'eventuale consulenza sanitaria richiesta.
+Nel caso in cui venga emessa una polizza che prevede l’attivazione di un facoltativo al trattato di riassicurazione, viene richiesto all’agenzia di comunicare tempestivamente la conclusione della trattativa e l’avvenuto incasso affinché la Sede possa procedere all’invio dell'ordine fermo al riassicuratore entro le 24 ore successive al pagamento del premio. Al fine di ripetere l'attività di invio del fermo al riassicuratore anche negli anni in cui la polizza sarà rinnovata, la persona incaricata registra la posizione su uno specifico file. In tal modo, la persona incaricata dell'ufficio Presidio Retail verificherà da scadenzario che il premio degli anni successivi venga incassato ed in seguito predisporrà il nuovo ordine fermo.
+Contestualmente alla chiusura del ticket su ISAAC la persona incaricata invia all’agente/gerente un codice progressivo si sblocco (codice GRA), per consentirgli di completare l’emissione del contratto.
+Qualora l'agenzia abbia inoltrato la richiesta di autorizzazione direttamente tramite l'applicativo di gestione polizze (PASS), la persona incaricata procede allo sblocco della proposta tramite la funzione "gestione autorizzazioni" dello stesso applicativo.
+Le richieste che comportano invece una valutazione negativa della proposta assuntiva vengono classificati come "rischi rifiutati" e sono oggetto della specifica procedura aziendale prevista che comporta la segnalazione a tutte le persone dell'ufficio assuntivo e, nei casi previsti dal Manuale delle Regole Assuntive, anche alla Direzione Assicurativa.
+
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+PASS
+ISAAC
+
+
+
+270
+1C - Sconto in deroga alle regole
+ di flessibilità commerciale
+TITOLO
+Richiesta autorizzazione per deroga flessibilità/utilizzo del jolly
+DESCRIZIONE
+Qualora l'applicativo abbia segnalato che lo sconto applicato deroga al sistema di flessibilità commerciale e l'agente intenda mantenerlo invariato, lo stesso richiede tramite mail o applicativo di gestione richieste l'autorizzazione all'ufficio assuntivo di Direzione nei seguenti casi:
+-per l'importo di flessibilità insufficiente l'agenzia richiederà il reintegro dell'importo di flessibilità;
+-per il superamento dello sconto massimo consentito sul prodotto l'agenzia attiva la richiesta di autorizzazione;
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+ISAAC
+
+
+
+280
+TITOLO
+Valutazione richiesta di integrazione flessibilità
+DESCRIZIONE
+Il Responsabile dell'unità effettua una valutazione dell'opportunità di concedere all'agenzia un reintegro dell'importo di flessibilità esaurito, sulla base di apposita matrice di valutazione.
+Nel caso di riscontro positivo, procede con il reintegro dell'importo di sconto sull'applicativo dedicato, che a sua volta trasmette l'informazione all'applicativo di gestione polizze.
+In caso di valutazione negativa, il responsabile non concede il reintegro dell'importo di flessibilità; l'agenzia, pertanto, può emettere la polizza solo a condizione di ridurre l'importo di sconto applicato nei limiti dell'importo di flessibilità residuo (o, in caso di flessibilità esaurita, nei limiti della percentuale di sconto extra prevista in autonomia sul prodotto).
+ALTRO STRUMENTO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+FLEXCOMM
+
+
+
+290
+2A - Valutazione positiva
+TITOLO
+Caricamento a sistema
+DESCRIZIONE
+Il sistema applicativo di riferimento carica in automatico i dati a sistema.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+FLEXCOMM
+
+
+
+300
+TITOLO
+Valutazione richiesta di superamento sconto massimo e caricamento autorizzazione
+DESCRIZIONE
+In seguito alla ricezione di una richiesta di autorizzazione dall'agente tramite mail sulla casella di posta d'ufficio o tramite l'applicativo di gestione richieste, il sistema provvederà a tracciare l'avanzamento della richiesta mettendo in rilievo all'utente le richieste più vecchie in carico all'assuntore. Il sistema invia all'agenzia una mail indicando il codice univoco che viene automaticamente assegnato al caso dall'applicativo.
+Contestualmente la persona incaricata effettua una valutazione della richiesta sia dal punto di vista tecnico che dal punto di vista commerciale.
+In particolare:
+- analizza le condizioni di assicurabilità nel rispetto delle linee di politica assuntiva del settore, con riferimento a  
+competenzario, circolari, tariffe, riscontri statistici, pratica assuntiva seguita in casi analoghi;
+- valuta il contesto in cui è inserita la trattativa: posizione commerciale del contraente, andamento tecnico e dimensione del portafoglio dell'agenzia proponente, rapporti con il broker avente il ruolo di intermediario, ecc.;
+- in caso di necessità, esamina la trattativa con il/la responsabile e/o dirigente;
+- in caso di variazione/sostituzione di contratto in corso, verifica le condizioni presenti sulla polizza da variare/sostituire e l'andamento tecnico delle stesse.
+Nel caso di valutazione negativa, la persona incaricata non autorizza la richiesta dell'agente il quale, se vuole proseguire con l'emissione della polizza, deve ridurre la percentuale entro le autonomie agenziali.
+ALTRO STRUMENTO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+ISAAC
+RADAR 2.0
+PASS
+CRM
+
+
+
+310
+TITOLO
+Caricamento autorizzazione alla deroga sconto massimo
+DESCRIZIONE
+La persona incaricata indica via mail o tramite l’applicativo di gestione richieste i termini dell’autorizzazione, restituendo all’agente/gerente un codice progressivo di sblocco (codice GRA) per consentirgli di completare l’emissione.
+Qualora l'agenzia abbia inoltrato la richiesta di autorizzazione direttamente tramite l'applicativo di gestione polizze, la persona incaricata procede allo sblocco della proposta tramite la funzione "gestione autorizzazioni" dello stesso applicativo.
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+GRA Gestione Richieste Autorizzazione Assuntive
+ISAAC
+
+
+
+320
+1D - Sconto in deroga alla flessibilità
+ e impossibilità contatto con Dir.
+TITOLO
+Utilizzo del Jolly
+DESCRIZIONE
+Nel caso in cui sia impossibile richiedere l'autorizzazione all'emissione della polizza con sconto non in autonomia agenziale (a causa di sfasamenti di operatività oggettivi) e l'emissione della polizza non possa essere rimandata, l'agente può utilizzare appositi "Jolly" (assegnati in numero predefinito).
+L'agenzia che utilizza il Jolly deve comunque contestualmente richiedere l'autorizzazione alle condizioni di sconto applicate alla polizza ed il reintegro del Jolly stesso all'Ufficio assuntivo.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+PASS
+ISAAC
+APP AGENTI
+
+330
+TITOLO
+Controllare utilizzo jolly/warning
+DESCRIZIONE
+L'unità organizzativo presidio rete di vendita periodicamente effettua una verifica dei jolly/warning utilizzati dall'agenzia.
+GESTIONE ANOMALIA
+Qualora l'addetto necessiti chiarimenti contatterà le agenzie.
+ALTRO STRUMENTO
+E-mail
+TIPO
+Manuale
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+ISAAC
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+
+
+335
+3A - polizza in autonomia/autorizzata
+di agenzia
+TITOLO
+Verificare formazione su prodotti
+DESCRIZIONE
+Il sistema verifica che l'intermediario, che ha curato la trattativa con il cliente, abbia effettuato e superato il corso di formazione specifico per la vendita del prodotto.
+GESTIONE ANOMALIA
+Nel caso in cui l'intermediario non abbia effettuato lo specifico corso, il sistema blocca l'emissione e genera un alert informativo con cui viene richiesto di completare il percorso formativo per poter procedere all'emissione o di aprire una call su ISAAC per eventuali ragguagli.
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+UNIVERSITA' REALE
+CRM
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+340
+TITOLO
+Richiamo proposta e conclusione emissione polizza
+DESCRIZIONE
+Nel caso in cui la polizza sia stata richiesta in agenzia, l'agente richiama la proposta di polizza ed effettua le seguenti attività:
+- se la polizza non è in sua autonomia e la Direzione non ha sbloccato direttamente la proposta tramite l'applicativo di gestione delle polizze, inserisce il codice di sblocco fornitogli dall'ufficio assuntivo; inoltre, se la polizza è in regime di L.P.S, inserisce manualmente l'importo delle tasse fornitogli dalla Direzione nell'apposito campo. Infine procede con l'emissione del contratto;
+- se la polizza è nella sua autonomia, procede direttamente con l'emissione del contratto.
+Tra i documenti forniti, in assenza di informativa privacy già sottoscritta e/o aggiornata, il sistema genera anche il modulo privacy che dovrà essere compilato e sottoscritto dal cliente.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+APP AGENTI
+PASS
+
+350
+TITOLO
+Verificare rischi punta
+DESCRIZIONE
+l'unità organizzativa presidio rete di vendita trimestralmente esegue una verifica sui dati di portafoglio finalizzata a individuare le punte di rischio del mondo infortuni e l'esistenza dell'eventuale copertura riassicurativa.
+
+GESTIONE ANOMALIA
+In caso di posizioni irregolari l'addetto segnala agli uffici assuntivi le stesse
+ALTRO STRUMENTO
+E-mail
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Trimestrale
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+360
+TITOLO
+Definizione modalità sottoscrizione
+DESCRIZIONE
+L'addetto, prima di procedere al perfezionamento della polizza, verifica la disponibilità del cliente a sottoscrivere digitalmente o meno il contratto.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+PASS
+APP AGENTI
+
+
+
+370
+TITOLO
+Stampa e perfezionamento polizza infortuni/malattia
+DESCRIZIONE
+L'agente, tramite funzione dell'applicativo, effettua la stampa in triplice copia della polizza. A fronte dell'avvenuta stampa i documenti contrattuali vengono salvati in automatico sul documentale. Successivamente, contatta il cliente per l'apposizione della firma sul contratto e per il pagamento; infine effettua la contabilizzazione del titolo sull'apposito applicativo.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+DOCUMENTALE PORTAFOGLIO
+PASS
+
+
+
+380
+3B - polizza in autonomia/autorizzata
+da gerenza
+TITOLO
+Elaborazione e consegna al broker del preventivo di polizza
+DESCRIZIONE
+Nel caso in cui la polizza sia stata richiesta alla gerenza, il gerente, sulla base dei dati raccolti per i rischi in autonomia, provvede ad effettuare una simulazione di polizza su applicativo al fine di ottenere la quotazione da consegnare al broker. In particolare vengono inseriti a sistema tutti i dati necessari ad ottenere una bozza di contratto con l'indicazione del premio (tipologia di prodotto, frazionamento di polizza, data di inizio e scadenza del contratto, garanzie, ecc). 
+Il gerente trasmette tramite mail la quotazione al broker. 
+Nel caso in cui il rischio non sia in autonomia, il gerente provvede ad inoltrare al broker la quotazione fornita dall'ufficio assuntivo.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+GERENZA
+APPLICATIVO INFORMATICO
+PASS
+
+
+
+390
+TITOLO
+Registrazione preventivo rifiutato
+DESCRIZIONE
+Nel caso in cui il cliente rifiuti la proposta, il broker comunica al gerente tramite mail l'esito negativo della trattativa; lo stesso provvede a registrare su un apposito file Excel i dati della trattativa non conclusa.
+Alla fine di ogni annualità, il report contenente i dati e gli esiti di tutte le trattative richieste a Gerenza viene analizzato dal/dalla Dirigente per valutare l'operato dei brokers e dare indicazioni per la gestione dei rapporti con ciascuno di essi nell'annualità successiva.
+ALTRO STRUMENTO
+File Excel
+ESECUTORE
+GERENZA
+APPLICATIVO INFORMATICO
+-
+
+
+
+400
+TITOLO
+Comunicazione di validità della copertura e registrazione esito trattativa
+DESCRIZIONE
+Nel caso in cui il cliente accetti di stipulare il contratto, il broker comunica via mail al gerente l'esito positivo della trattativa. 
+Il gerente a sua volta comunica via fax al broker la validità della copertura, specificando la data di effetto della stessa.
+Successivamente provvede a registrare su un apposito file excel i dati della trattativa conclusa.
+Alla fine di ogni annualità, il report contenente i dati e gli esiti di tutte le trattative richieste a Gerenza viene analizzato dal/dalla Dirigente per valutare l'operato dei brokers e dare indicazioni per la gestione dei rapporti con ciascuno di essi nell'annualità successiva.
+ALTRO STRUMENTO
+Fax cartaceo
+ESECUTORE
+GERENZA
+APPLICATIVO INFORMATICO
+-
+
+
+
+410
+TITOLO
+Raccolta dati anagrafici del cliente
+DESCRIZIONE
+Nel caso in cui la trattativa si sia conclusa positivamente, il gerente richiede al cliente, tramite il broker, i seguenti dati anagrafici:
+- se Persona Fisica: nome e cognome, codice fiscale, indirizzo di residenza, luogo e data di nascita, numero e scadenza del documento di identità;
+- se Persona Giuridica: ragione sociale, tipologia societaria, partita IVA, settore attività economica, ente pubblico si/no, indirizzo.
+La compilazione del questionario di adeguatezza è effettuata dal broker su modulo cartaceo.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+GERENZA
+APPLICATIVO INFORMATICO
+-
+
+
+
+420
+TITOLO
+Attivazione procedura di emergenza per emissione polizze RE
+DESCRIZIONE
+Nel caso in cui si verifichi un errore informatico che impedisca di completare l'emissione di uno specifico prodotto, oppure una mancanza di linea del sistema, e il perfezionamento della polizza non possa essere rimandato, il gerente si collega all'applicativo per le procedure di emergenza, seleziona il prodotto relativo alla polizza da emettere e procede con il caricamento e la stampa di una polizza "provvisoria", da consegnare al cliente. Tutti i documenti emessi tramite l'applicativo di emergenza devono successivamente essere riemessi in maniera definitiva sull'applicativo di gestione polizze danni.
+Per fare in modo che le polizze emesse in procedura di emergenza abbiano la medesima numerazione progressiva attribuita dall'applicativo di gestione polizze danni, ogni agenzia provvede periodicamente a "prenotare" alcuni numeri di polizza sull'applicativo, nell'eventualità di poterli attribuire ai contratti emessi in procedura di emergenza (in modo che le corrispondenti polizze emesse successivamente in modalità definitiva mantengano la numerazione attribuita in emissione provvisoria).
+La persona incaricata sceglie le sezioni da attivare (tra quelle previste dal prodotto), inserisce il numero di garanzie e indica per ognuna di esse la descrizione,  la somma assicurata e il premio.
+L'applicativo provvede alla somma di tutti i premi inseriti per ogni garanzia e alla stampa del documento di polizza sulla base delle informazioni digitate in emissione; non sono previsti controlli di congruità tra garanzie e/o su eventuali limiti assuntivi.
+In seguito alla riattivazione del servizio la persona incaricata procede all'emissione sull'applicativo online. 
+ALTRO STRUMENTO
+-
+ESECUTORE
+GERENZA
+APPLICATIVO INFORMATICO
+PROCEDURA DI EMERGENZA
+
+
+
+430
+TITOLO
+Caricamento dei dati anagrafici del cliente a sistema
+DESCRIZIONE
+Ottenuti i dati anagrafici e la conferma dell'adeguatezza del prodotto dal broker, il gerente accede all'applicativo e inserisce il codice fiscale/la partita IVA del cliente; il sistema si collega automaticamente all'Anagrafica Unica Centralizzata per verificare un eventuale precedente censimento. 
+Nel caso in cui il sistema non riscontri l’esistenza del nominativo, il gerente compila i campi relativi ai dati anagrafici del cliente sull’applicativo di gestione delle anagrafiche. Completato l’inserimento, il gerente accede nuovamente all’applicativo di emissione polizze e, digitando il codice fiscale/partita IVA, recupera i dati caricati.
+Nel caso in cui la ricerca evidenzi l'esistenza dei dati del cliente, tali dati vengono importati automaticamente a sistema.
+Nel caso in cui il cliente non avesse ancora compilato e sottoscritto l'informativa privacy aggiornata l'addetto di Agenzia provvede a regolarizzare la posizione.
+Successivamente, l'applicativo verifica la completezza e la correttezza dei dati inseriti / importati.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+GERENZA
+APPLICATIVO INFORMATICO
+PASS
+ANAGRAFICA UNICA CENTRALIZZATA
+
+440
+TITOLO
+Verificare la correttezza/coerenza dati anagrafici
+DESCRIZIONE
+Completato l'inserimento manuale / l'importazione automatica dei dati sull'applicativo, il sistema ripercorre automaticamente tutti i campi dati disponibili al fine di verificare che tutti quelli obbligatori siano stati compilati e che i dati del cliente siano congruenti (codice fiscale – nome e cognome del cliente; luogo e data di nascita; scadenza del documento d’identità, per la persona fisica; congruenza della partitia IVA per la persona giuridica).
+GESTIONE ANOMALIA
+Qualora l'applicativo rilevasse la presenza di errori o l'incompletezza dei dati, avvisa la persona incaricata tramite un alert ed il blocco delle schermate successive; il/la gerente provvederà ad alimentare i campi mancanti o non corretti.
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+PASS
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+450
+TITOLO
+Selezione prodotto e caricamento dei dati necessari all'emissione polizza
+DESCRIZIONE
+La persona incaricata, dopo aver selezionato il prodotto richiesto dal cliente ed inserito l'intestatario della polizza, accede alla sezione dell'applicativo relativa ai dati tecnici ed inserisce i seguenti dati:
+- Frazionamento di polizza;
+- Data Effetto e Data Scadenza del contratto;
+- Coassicurazione (se la polizza prevede la ripartizione del rischio tra diverse Compagnie)
+- Indicizzazione, vincolo, rischio comune (si/no) ;
+- Uso Imposta (prevalorizzato con l'informazione "base", da modificare nel caso in cui il contratto debba essere emesso senza imposte);
+- Rescindibilità e Data Rescindibilità (campo da valorizzare solo in caso di contratto di durata poliennale con rescindibilità annuale);
+- Tacito rinnovo (si/no).
+In caso di rischio ubicato all'estero, la persona incaricata inoltre attiva il campo "Polizza LPS" e seleziona dall'elenco il Paese nel quale è ubicato il bene da assicurare.
+Successivamente accede alla sezione relativa ai beni assicurati, nella quale i dati da compilare variano a seconda del prodotto selezionato.
+Poi procede alla selezione delle garanzie da inserire in polizza, dei valori assicurati per le garanzie selezionate e delle eventuali clausole legate ad esse (esempio: modalità di liquidazione, franchigie, ecc).
+Qualora il preventivo sia stato effettuato tramite il sistema, la persona incaricata recupera la bozza di contratto e la completa con le informazioni mancanti.
+ALTRO STRUMENTO
+-
+ESECUTORE
+GERENZA
+APPLICATIVO INFORMATICO
+PASS
+
+460
+TITOLO
+Verificare completezza dati, congruenza tra garanzie e/o clausole e rispetto limiti assuntivi
+DESCRIZIONE
+L'applicativo effettua dei controlli automatici sul corretto caricamento dei dati relativi al rischio da assicurare.
+In particolare viene verificata:
+- la completezza dei dati inseriti, variabile a seconda del prodotto selezionato;
+- la congruità tra le garanzie selezionate;
+- la congruità tra le garanzie e le clausole inserite;
+- la presenza del flag LPS, nel caso in cui sia stato selezionato un paese nel campo "ubicazione del rischio" diverso da Italia.
+In caso di esito positivo dei suddetti controlli, verifica che, per ciascuna garanzia selezionata, la somma assicurata inserita sia assicurabile in autonomia dalla Gerenza.
+Se l'ubicazione del rischio è in Italia, i controlli di congruità sono positivi e le garanzie,/clausole/somme assicurate sono assicurabili in autonomia dall'agenzia, l'applicativo non attiva alcuna segnalazione ed autorizza la persona incaricata all'emissione del contratto.
+GESTIONE ANOMALIA
+Nel caso in cui :
+- i dati siano incompleti, 
+- siano presenti incongruenze tra le garanzie selezionate, o tra queste e le clausole inserite;
+- sia stato alimentato il campo "ubicazione del rischio" con un paese diverso da Italia ma non sia stato flaggato il campo "LPS"
+il sistema attiva un messaggio di errore e non consente la prosecuzione dell'attività di emissione fino a quando non viene ripristinata la situazione corretta.
+Nel caso in cui la composizione di polizza selezionata non sia assicurabile in autonomia dalla Gerenza, il sistema emette, a seconda dei casi:
+-una segnalazione non bloccante (warning), nel caso in cui l'agente abbia inserito una garanzia/clausola/somma assicurata oltre i propri limiti; per poter proseguire, deve richiedere l'autorizzazione della Direzione.
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+PASS
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+470
+TITOLO
+Quotazione del premio e selezione dello sconto
+DESCRIZIONE
+L'applicativo calcola la quotazione del premio di polizza in base alle garanzie selezionate, ai massimali assicurati e alla presenza di eventuali clausole particolari; il premio complessivo così visualizzato è già comprensivo di eventuali riduzioni calcolate automaticamente dal sistema in funzione delle regole previste sul prodotto (esempio: riduzione del premio in caso di scelta di determinate garanzie).
+La persona incaricata successivamente accede alla sezione relativa allo sconto (per i prodotti sui quali tale funzionalità è abilitata) e inserisce, alternativamente:
+- lo sconto commerciale desiderato sul premio complessivo;
+- lo sconto puntuale a livello di singola garanzia.
+ALTRO STRUMENTO
+-
+ESECUTORE
+GERENZA
+APPLICATIVO INFORMATICO
+PASS
+
+480
+TITOLO
+Verificare sconto massimo inserito
+DESCRIZIONE
+L'applicativo effettua un controllo della percentuale di sconto inserito dal gerente al fine di verificare che sia compatibile con l'autonomia di cui dispone, variabile a seconda della tipologia di prodotto che sta emettendo e definito nel competenziario.
+Nel caso di riscontro positivo, il sistema non emette segnalazioni.
+GESTIONE ANOMALIA
+Nel caso di superamento dello sconto massimo consentito, il sistema visualizza una segnalazione non bloccante (warning) che avverte la gerenza che lo sconto inserito necessita di essere autorizzato dall'ufficio assuntivo di Direzione.
+ALTRO STRUMENTO
+-
+TIPO
+Automatico
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+PASS
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+490
+TITOLO
+Emissione, stampa e perfezionamento polizza Infortuni o Malattie individuale
+DESCRIZIONE
+Nel caso di polizza intermediata da broker, il gerente effettua la stampa in quadruplice copia della polizza e la invia tramite corriere allo stesso affinchè raccolga la firma del contraente.
+Nel caso di assunzione diretta, effettua la stampa in triplice copia e contatta il cliente per la firma.
+Tra i documenti forniti, in assenza di informativa privacy già sottoscritta e/o aggiornata, il sistema genera anche il modulo privacy che dovrà essere compilato e sottoscritto dal cliente.
+Successivamente procede con la contabilizzazione dell'incasso.
+ALTRO STRUMENTO
+-
+ESECUTORE
+GERENZA
+APPLICATIVO INFORMATICO
+PASS
+
+
+
+500
+4A - Polizza emessa 
+con Riassicurazione
+TITOLO
+Predisposizione dell'ordine fermo di riassicurazione
+DESCRIZIONE
+Solo nel caso di riassicurazione facoltativa, la persona incaricata compila ed inoltra l'ordine fermo (contenente i dati del rischio ceduto, le condizioni di cessione, la periodicità dei conti, le modalità di regolazione saldi, ecc) e la cover note (la nota di copertura) al riassicuratore. 
+La persona incaricata procede con il caricamento sul sistema informatico delle condizioni convenute ed emette la polizza. La persona incaricata infine comunica, tramite apposito modulo, all’ufficio Riassicurazione, l’avvenuta formalizzazione del facoltativo. Tutta la documentazione viene successivamente salvata sull’applicativo di gestione richieste (ISAAC).
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+CRM TPR
+SICS
+
+
+
+510
+TITOLO
+Scarico immagine/dati polizza su applicativo di back office di agenzia/gerenza
+DESCRIZIONE
+Una volta conclusa l'emissione e la stampa della polizza, il sistema di front office del ramo danni effettua uno scarico dell'immagine e dei dati (es: nome del contraente, tipo di prodotto, ecc) della stessa sull'applicativo di back office dell'agenzia/della gerenza.
+L'agenzia/la gerenza utilizza l'immagine scaricata per consultare la scansione della polizza senza dover recuperare la copia cartacea della stessa; i dati invece vengono utilizzati per eventuali operazioni di marketing territoriale, azioni mirate sulla clientela, ecc.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+CONNECTA WEB
+
+515
+TITOLO
+Verificare completezza documentazione
+DESCRIZIONE
+L'addetto, a fronte della ricezione della documentazione, ne verifica la completezza e l'avvenuta compilazione e sottoscrizione, per poi procedere alla scansione.
+GESTIONE ANOMALIA
+In presenza di anomalie, l'addetto contatta il cliente per regolarizzare la documentazione.
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+RETE DI VENDITA
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Media
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+520
+TITOLO
+Referenziazione e scansione documentazione
+DESCRIZIONE
+L'addetto referenzia i documenti privi di Datamatrix (QR Code), in modo tale da render acquisibili e disponibili sul documentale.
+La referenziazione può avvenire con tre modalità:
+. generazione etichetta da applicare sul documento da scansionare;
+. stampa foglio formato A4 con QR Code, da anteporre - in fase di scansione - al documento da acquisire;
+. salvataggio di un documento in formato elettronico, mediante referenziazione virtuale.
+Completata la referenziazione, l'addetto procedere alla scansione di tutti i documenti esogeni ed endogeni.
+La copia della documentazione riservata all'agenzia viene quindi archiviata nelle apposite scatole nel rispetto delle modalità operative indicate dalla Compagnia.
+ALTRO STRUMENTO
+-
+ESECUTORE
+RETE DI VENDITA
+APPLICATIVO INFORMATICO
+GRMA SCAN
+ANAGRAFICA UNICA CENTRALIZZATA
+DOCUMENTALE PORTAFOGLIO
+
+
+
+530
+TITOLO
+Invio documentazione individuale infortuni/malattie
+DESCRIZIONE
+Raccolte le firme necessarie per il perfezionamento del contratto, l'agente invia una copia dell'atto, del questionario informativo, del questionario anamnestico (polizza malattia) e dell'eventuale questionario finanziario (polizza infortuni) e l'eventuale foglio di calcolo della tassa (polizza infortuni/malattia in LPS) al centro servizi, tramite posta interna; quest'ultimo è responsabile di tutte le verifiche post emissione della documentazione ricevuta.
+L'ultima copia della polizza rimane in agenzia.
+In caso di polizza emessa dalla Gerenza, la persona incaricata effettua un primo invio della polizza priva della firma del contraente; successivamente provvede all'invio della copia firmata.
+Nell'invio al Centro Servizi della documentazione di contratto, viene trasmessa anche la copia del consenso sul trattamento dei dati personali di Compagnia (Privacy) sottoscritta dal cliente.
+Infine, le polizze malattie Rimborso Spese Mediche vengono trasmesse dalle agenzie/dalle gerenze a Blue Assistance via fax ad un numero dedicato oppure a mezzo posta affinché possano essere caricati sui loro archivi ed essere allineati qualora gli assicurati dovessero contattare il Servizio Clienti di Blue per prestazioni sanitarie.
+ALTRO STRUMENTO
+Fax cartaceo
+ESECUTORE
+RETE DI VENDITA
+APPLICATIVO INFORMATICO
+-
+
+
+
+540
+TITOLO
+Archiviazione della polizza individuale infortuni/malattie
+DESCRIZIONE
+La persona incaricata raccoglie le polizze ed i questionari perfezionati e verificati dal centro servizi e dispone il tutto in ordine progressivo di codice all’interno di appositi contenitori che vengono archiviati presso la sede. Successivamente provvede ad effettuare una scansione sul sistema di gestione di Blue Assistance. 
+ALTRO STRUMENTO
+-
+ESECUTORE
+ARCHIVE - Office
+APPLICATIVO INFORMATICO
+BLUEOTTICO
+
+
+
+550
+TITOLO
+Scarico polizza su applicativo di gestione polizze emesse
+DESCRIZIONE
+Giornalmente, l'applicativo di emissione delle polizze Rami elementari effettua uno scarico automatico delle polizze di nuova emissione su un apposito database.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+CONTRATTI
+
+
+
+560
+TITOLO
+Estrazione polizze per verifica rispetto policy assuntive
+DESCRIZIONE
+Con cadenza mensile la persona incaricata effettua, dal database contenente tutto l'elenco delle polizze emesse, l'estrazione di un sottoinsieme di contratti avente particolari condizioni assuntive (quali, ad esempio, somme assicurate superiori ai limiti agenziali, clausole a testo libero, sconto superiore all'autonomia, codici di rischio "R.D", ecc) con l'obiettivo di effettuare una verifica dell'operato dell'agenzia/della gerenza dal punto di vista del rispetto delle policy assuntive.
+I criteri con cui è eseguita l'estrazione sono stabiliti dall'ufficio stesso.
+ALTRO STRUMENTO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+CONTRATTI
+
+570
+TITOLO
+Verificare rispetto da parte dell'agenzia/della gerenza delle policy assuntive
+DESCRIZIONE
+La persona incaricata confronta l'elenco delle polizze estratte dal database con l'elenco delle autorizzazioni rilasciate tramite apposito applicativo al fine di verificare che:
+- per ogni polizza emessa con condizioni fuori dalle competenze agenziali sia presente una relativa autorizzazione;
+- che le condizioni applicate alla polizza coincidano con quelle contenute nell'autorizzazione.
+Per ciascuna polizza verificata, la persona incaricata alimenta il database inserendo, negli appositi campi testo, l'esecutore e le modalità del controllo, l'esito della verifica e l'eventuale provvedimento che si è deciso di adottare.
+GESTIONE ANOMALIA
+Qualora la persona incaricata riscontri la presenza di polizze senza autorizzazione o con condizioni applicate difformi da quelle indicate nell'autorizzazione, attiva la procedura di rilievo: tramite la messaggistica dell'applicativo di gestione polizze, invia una comunicazione all'agenzia/alla gerenza utilizzando una tra le diverse tipologie di messaggi predefiniti dal sistema o il messaggio generico per i casi più complessi, richiedendo di fornire una spiegazione in merito al mancato rispetto delle policy assuntive.
+Se l'agenzia/la gerenza non risponde entro 5 giorni, la persona incaricata invia una mail di sollecito; se dopo altri 3 giorni non perviene ancora risposta, la persona incaricata segnala il caso alla Direzione Commerciale.
+ALTRO STRUMENTO
+E-mail
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+PASS
+EFFICACIA DEL CONTROLLO
+Media
+NATURA RISCHIO SOTTOSTANTE
+-
+MODALITA' ESECUZIONE CONTROLLO
+-
+
+580
+TITOLO
+Attuazione del provvedimento
+DESCRIZIONE
+Dopo aver informato la Direzione Commerciale, la persona incaricata applica il provvedimento più idoneo all'agenzia/gerenza che ha violato le policy assuntive.
+In base alla gravità della violazione e alla motivazione presentata dall'agente, il provvedimento può consistere in:
+- archiviazione del rilievo come "risolto", nel caso in cui si riscontri a posteriori l'effettiva presenza di una autorizzazione;
+- accettazione della deroga con una autorizzazione "postuma" e invio all'agenzia/alla gerenza di una segnalazione di richiamo tramite mail;
+- storno del corrispettivo provvigionale relativo alla polizza emessa (solo per le agenzie in appalto);
+- eventuale storno della polizza.
+Inoltre la persona incaricata, se nel controllo verifica che la polizza è stata emessa a nuovo anzichè in sostituzione di un precedente contratto (con conseguente accredito di sovrapprovvigioni non dovute), oltre ad attivare la procedura di rilievo, segnala il caso all'ufficio pianificazione e controllo della Direzione Commerciale, che provvede all'addebito dell'importo non dovuto.
+ALTRO STRUMENTO
+-
+ESECUTORE
+CONSULENZA RETAIL
+APPLICATIVO INFORMATICO
+PASS
+
+
+
+

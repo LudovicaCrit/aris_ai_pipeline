@@ -1,0 +1,253 @@
+convert /mnt/user-data/uploads/2_12_2_01_ITA_Auto__RE_Danni_non_auto_Autorizzazione_deroghe.doc as a Writer document -> /tmp/tmp8dju_a_j/2_12_2_01_ITA_Auto__RE_Danni_non_auto_Autorizzazione_deroghe.txt using filter : Text
+﻿Flusso di processo
+
+2.12.2.01 ITA - Auto / RE Danni non auto Autorizzazione deroghe
+Macroprocesso
+
+2 PROCESSI DI BUSINESS
+Processo
+
+2.12 Front Office Retail
+Sottoprocesso
+
+2.12.2 Supporto Assunzione Italiana
+Periodicità di esecuzione
+
+Ad evento
+Owner
+
+FOR AUTO / DANNI NON AUTO - Ufficio
+App senza presidio IT
+
+
+Recovery Point Objective
+
+Fascia 0
+Recovery Time Objective
+
+128 ore
+
+
+
+Data ultimo aggiornamento
+
+Nov 26, 2025, 9:19:38 AM
+
+Svolto per Reale Mutua
+No
+
+Svolto per Italiana
+Si
+
+Svolto per Blue Assistance
+No
+
+Svolto per Banca Reale
+No
+
+Svolto per Reale Immobili
+No
+
+Svolto per Reale Seguros
+No
+
+Svolto per Reale Vida
+No
+
+Svolto per ITES
+No
+
+Svolto per Compagnia Extragruppo
+No
+
+Svolto per Reale Chile
+No
+
+Svolto per Reale Foundation
+No
+
+Svolto per BHC
+No
+
+Svolto per Reale International
+No
+
+Svolto per Reale Ites Esp
+No
+
+Svolto per Italnext
+No
+
+Svolto per Ydrogios
+No
+
+Svolto per Reale Immobili Esp
+No
+
+
+
+
+
+Dati trattati
+
+
+Riservatezza
+
+0
+Integrità
+
+1
+Disponibilità
+
+0
+Affidabilità
+
+0
+Privacy
+
+PERSONALI SENSIBILI
+
+
+Codice
+Attività
+Attività
+Codice
+Controllo
+Controllo
+010
+TITOLO
+Valutazione della richiesta
+DESCRIZIONE
+Qualora pervenuto un blocco RD (Riservato alla Direzione) riferibile all'ambito auto/danni non auto, l'applicativo di gestione delle richieste rende disponibile tale domanda di sblocco tra le richieste da prendere in carico dall'ufficio preposto.  
+
+NB: l'ufficio in questione (auto/danni non auto) varia a seconda del Ramo di prodotto interessato dalla richiesta pervenuta.
+  
+Le tipologie di richieste evidenziate dall'applicativo di gestione delle richieste fanno riferimento alle seguenti macro categorie: 
+- Richieste scontistica 
+- Richieste di deroghe tecniche 
+- Richieste appendice a testo libero 
+- Richieste post vendita 
+  
+I ticket vengono classificati ed indirizzati dall'applicativo in base all’Area Manager Commerciale di appartenenza.
+
+La persona incaricata, presa visione di quanto riportato nella richiesta, degli allegati presenti e della bozza di proposta pervenuta, valuta la richiesta tenendo conto delle autonomie operative.  
+ALTRO STRUMENTO
+-
+ESECUTORE
+FOR AUTO / DANNI NON AUTO - Ufficio
+APPLICATIVO INFORMATICO
+ISAAC
+PASS
+PASS AUTO
+
+
+
+020
+1B - Autorizzazioni deroghe riservate Direzione
+TITOLO
+Inoltro richiesta
+DESCRIZIONE
+La persona incaricata inoltra la valutazione di approvazione/rifiuto della deroga all'ufficio di competenza se questa non rientra nei suoi limiti.
+ALTRO STRUMENTO
+-
+ESECUTORE
+FOR AUTO / DANNI NON AUTO - Ufficio
+APPLICATIVO INFORMATICO
+ISAAC
+
+030
+TITOLO
+Valutazione approvazione deroga
+DESCRIZIONE
+La persona incaricata, tenendo conto delle autonomie operative analizza:
+- la bozza di polizza presente nell'applicativo di riferimento
+- eventuali documenti pervenuti tramite l'applicativo di gestione richieste
+- altri dati in suo possesso per la valutazione del cliente (scheda cliente anagrafe)
+- altri dati in suo possesso per la valutazione dell'intermediario in termini di andamento del recupero di premio medio, andamento produzione new business, sconto medio applicato, andamento rapporto tecnico di agenzia, ptf di agenzia 
+
+A conclusione della valutazione la persona incaricata provvede ad autorizzare o rifiutare la proposta nell'applicativo di riferimento.
+ 
+L'applicativo di emissione è stato aggiornato con un allargamento dei caratteri disponibili per i testi liberi così da farli divenire parte integrante della polizza senza necessità di emettere documenti aggiuntivi.
+ 
+Per le agenzie con procura l'intermediario e responsabile di quanto scrive nell'appendice e la sottoscrive personalmente. 
+ALTRO STRUMENTO
+-
+ESECUTORE
+FOR AUTO / DANNI NON AUTO - Ufficio
+APPLICATIVO INFORMATICO
+CRM ASSICURATIVO (DYNAMICS)
+ISAAC
+PASS AUTO
+PASS
+
+
+
+040
+TITOLO
+Valutazione approvazione deroga
+DESCRIZIONE
+La persona incaricata, tenendo conto delle autonomie operative analizza:
+- la bozza di polizza presente nell'applicativo di riferimento
+- eventuali documenti pervenuti tramite l'applicativo di gestione richieste
+- altri dati in suo possesso per la valutazione del cliente (scheda cliente anagrafe)
+- altri dati in suo possesso per la valutazione dell'intermediario in termini di andamento del recupero di premio medio, andamento produzione new business, sconto medio applicato, andamento rapporto tecnico di agenzia, ptf di agenzia 
+
+A conclusione della valutazione la persona incaricata provvede ad autorizzare o rifiutare la proposta nell'applicativo di riferimento.
+ 
+L’applicativo di emissione è stato aggiornato con un allargamento dei caratteri disponibili per i testi liberi così da farli divenire parte integrante della polizza senza necessità di emettere documenti aggiuntivi.
+ 
+Per le agenzie con procura l'intermediario e responsabile di quanto scrive nell'appendice e la sottoscrive personalmente. 
+ALTRO STRUMENTO
+-
+ESECUTORE
+FOR AUTO / DANNI NON AUTO - Ufficio
+APPLICATIVO INFORMATICO
+CRM ASSICURATIVO (DYNAMICS)
+ISAAC
+PASS AUTO
+PASS
+
+
+
+050
+TITOLO
+Verificare sconti eccedenti i limiti
+DESCRIZIONE
+Verifica campionaria degli sconti autorizzati oltre autonomia
+-
+ALTRO STRUMENTO
+-
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Semestrale
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+FOR AUTO / DANNI NON AUTO - Ufficio
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+Operativo
+MODALITA' ESECUZIONE CONTROLLO
+A campione
+
+060
+TITOLO
+Chiusura richiesta
+DESCRIZIONE
+Contestualmente alla chiusura della richiesta sull'applicativo di riferimento l'applicativo di gestione delle richieste inoltra in automatico una notifica via e-mail all'agente e chiude la richiesta. Qui si chiudono anche i tempi di misurazione delle SLA.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+ISAAC
+PASS
+PASS AUTO
+
+

@@ -1,0 +1,25 @@
+# Ambienti virtuali
+.venv/
+.venv_linux/
+venv/
+
+# Chiavi e segreti
+.env
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Output generati
+*.html
+output/
+
+# File di sistema
+.DS_Store
+Thumbs.db
+
+# Non pertinente al progetto
+regressor/
+
+# Token e credenziali
+token.json

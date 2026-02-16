@@ -1,0 +1,315 @@
+convert /mnt/user-data/uploads/2_12_2_03_ITA_-_Auto_Ricarica_monte_sconti.doc as a Writer document -> /tmp/tmpv986_njv/2_12_2_03_ITA_-_Auto_Ricarica_monte_sconti.txt using filter : Text
+﻿Flusso di processo
+
+2.12.2.03 ITA - Auto Ricarica monte sconti
+Macroprocesso
+
+2 PROCESSI DI BUSINESS
+Processo
+
+2.12 Front Office Retail
+Sottoprocesso
+
+2.12.2 Supporto Assunzione Italiana
+Periodicità di esecuzione
+
+Ad evento
+Owner
+
+FOR AUTO / DANNI NON AUTO - Ufficio
+App senza presidio IT
+
+
+Recovery Point Objective
+
+Fascia 0
+Recovery Time Objective
+
+128 ore
+
+
+
+Data ultimo aggiornamento
+
+Jul 18, 2025, 10:18:28 AM
+
+Svolto per Reale Mutua
+No
+
+Svolto per Italiana
+Si
+
+Svolto per Blue Assistance
+No
+
+Svolto per Banca Reale
+No
+
+Svolto per Reale Immobili
+No
+
+Svolto per Reale Seguros
+No
+
+Svolto per Reale Vida
+No
+
+Svolto per ITES
+No
+
+Svolto per Compagnia Extragruppo
+No
+
+Svolto per Reale Chile
+No
+
+Svolto per Reale Foundation
+No
+
+Svolto per BHC
+No
+
+Svolto per Reale International
+No
+
+Svolto per Reale Ites Esp
+No
+
+Svolto per Italnext
+No
+
+Svolto per Ydrogios
+No
+
+Svolto per Reale Immobili Esp
+No
+
+
+
+
+
+Dati trattati
+
+
+Riservatezza
+
+0
+Integrità
+
+0
+Disponibilità
+
+0
+Affidabilità
+
+0
+Privacy
+
+PERSONALI SENSIBILI
+
+
+Codice
+Attività
+Attività
+Codice
+Controllo
+Controllo
+010
+TITOLO
+Richiesta ricarica montesconti
+DESCRIZIONE
+Rilevata la necessità di ricaricare il montesconti, l'agente predispone la richiesta da inoltrare all'ufficio di riferimento aprendo manualmente un ticket denominato FLEXCOMM sull'applicativo di gestione richieste.
+
+ALTRO STRUMENTO
+-
+ESECUTORE
+AGENZIA
+APPLICATIVO INFORMATICO
+ISAAC
+
+
+
+020
+TITOLO
+Richiesta ricarica montesconti
+DESCRIZIONE
+Rilevata la necessità di ricaricare il montesconti, la persona incaricata predispone la richiesta da inoltrare all'ufficio di riferimento tramite e-mail (strumento utilizzato raramente) La richiesta viene indirizzata chiedendo l’ apertura da parte dell’agenzia di ticket all'interno dell'applicativo di gestione richieste.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+SPECIALISTI VENDITE E REGIONAL ACCOUNT MANAGER
+APPLICATIVO INFORMATICO
+ISAAC
+
+
+
+030
+TITOLO
+Analisi richiesta
+DESCRIZIONE
+Le richieste possono pervenire a fronte di due necessità: 
+ - anticipatamente ad un'effettiva necessità assuntiva
+ - contestualmente ad un'effettiva necessità assuntiva
+ 
+Le tipologie di richieste che la persona incaricata può gestire sono:
+ - Ricarica montesconti in autonomia affari nuovi (autovetture o altri settori)
+ - Ricarica montesconti in autonomia rinnovi (autovetture o altri settori)
+  
+Le richieste possono pervenire in due modalità attraverso l'applicativo di gestione richieste:
+ - Specifiche: l'applicativo di emissione apre ed  indirizza in automatico la tipologia di richiesta pervenuta verso l'ufficio incaricato.
+ - Generiche: la persona preposta di agenzia compila manualmente un ticket senza riferimenti a specifici affari.
+Se le informazioni contenute nel ticket generico non sono sufficienti per la valutazione, la persona incaricata si occupa di contattare l'agente per integrare tutte le informazioni mancanti.
+Qualora la richiesta pervenuta non sia tra le tipologie gestibili dalla persona incaricata, questa verrà manualmente inoltrata da quest'ultima alla Direzione. 
+ 
+La persona dell'Ufficio preposto, tenendo conto delle proprie autonomie operative, valuta quindi se può prendersi in carico o meno l'approvazione della ricarica montesconti.
+ 
+La richiesta viene inoltrata alla Direzione nei seguenti casi: 
+ - Per le richieste di ricarica montesconti in autonomia rinnovi se la richiesta è legata ad una sistematica difficoltà di mantenimento del portafoglio dovuta a distrazione ex agenti/subagenti, difesa clienti globali al fine di valutare un intervento strutturale. 
+ - Per le richieste di ricarica montesconti nuovi affari in caso in cui la richiesta sia per un cliente con più di 3 veicoli.
+ALTRO STRUMENTO
+-
+ESECUTORE
+FOR AUTO / DANNI NON AUTO - Ufficio
+APPLICATIVO INFORMATICO
+ISAAC
+
+
+
+040
+1A - Richieste riservate Direzione
+TITOLO
+Inoltro richiesta 
+DESCRIZIONE
+La persona incaricata inoltra manualmente il ticket alla Direzione tramite l'applicativo di gestione richieste.
+ALTRO STRUMENTO
+-
+ESECUTORE
+FOR AUTO / DANNI NON AUTO - Ufficio
+APPLICATIVO INFORMATICO
+ISAAC
+
+
+
+050
+1B - Richieste di competenza
+TITOLO
+Valutazione richiesta
+DESCRIZIONE
+La persona incaricata 
+valuta se approvare o meno la ricarica montesconti tenendo conto dei seguenti aspetti:
+- dati relativi all'assicurando;
+- andamento tecnico/commerciale dell'agenzia; 
+ 
+Pertanto, In caso di valutazione positiva la persona incaricata accredita il montesconti (in tutto o in parte quanto richiesto) tramite l'applicativo che automaticamente assegna l’importo all’agenzia nel gestionale di emissione  gestionale auto e registra il dettaglio della richiesta dell’importo in apposito file Excel di scarico Montesconti presente e salvato su un disco condiviso; oppure nega la richiesta.  
+ 
+ALTRO STRUMENTO
+-
+ESECUTORE
+FOR AUTO / DANNI NON AUTO - Ufficio
+APPLICATIVO INFORMATICO
+PASS AUTO
+FLEXCOMM
+ISAAC
+
+
+055
+TITOLO
+Notifica automatica esito richiesta
+DESCRIZIONE
+Il sistema invia automaticamente una notifica via e-mail all'agenzia con l'esito della valutazione della richiesta di ricarica montesconti, includendo l'importo approvato o le motivazioni del diniego.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+ISAAC
+
+060
+TITOLO
+Verificare file di scarico Montesconti
+DESCRIZIONE
+La persona incaricata, per eseguire l’operazione di ricarica compila gli appositi campi nell’applicativo  controllando la coerenza delle voci inserite in merito a quanto è necessario erogare.
+Al fine di verificare la coerenza della richiesta interroga la  storicità degli importi già erogati consultando lo scarico excel prodotto dall’applicativo.
+GESTIONE ANOMALIA
+Tale verifica permette di verificare eventuali importi anomali erogati. Qualora venga riscontrato un errore nella compilazione del file, la persona incaricata provvede a modificare le operazioni effettuate per sanare l’errore.
+ALTRO STRUMENTO
+File Excel
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Giornaliera
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+FOR AUTO / DANNI NON AUTO - Ufficio
+APPLICATIVO INFORMATICO
+ISAAC
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+Operativo
+MODALITA' ESECUZIONE CONTROLLO
+Massivo
+
+
+
+070
+TITOLO
+Verificare Importi di sconto utilizzati
+DESCRIZIONE
+Con cadenza quindicinale si effettua verifica attraverso analisi del file excell di scarico dell’applicativo, controllando ulteriormente  la presenza di importi anomali nelle erogazioni. Si controlla inoltre  che gli importi erogati nel periodo di riferimento rispetto ai mesi precedenti siano coerenti con le linee assuntive di business in quanto viene controllata la coerenza di erogazione dei singoli cassetti rispetto ai mesi precedenti e si confronta il dato anche rispetto al budget (se è stato previsto da direzione auto).
+GESTIONE ANOMALIA
+Qualora venga riscontrato un errore nelle ricariche effettuate, si procede a modificare con una operazione a sistema che va a sanare l sanare l’errore  .
+ALTRO STRUMENTO
+File Excel
+TIPO
+Manuale
+SCOPO
+Ex post
+PERIODICITA'
+Quindicinale
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+FOR AUTO / DANNI NON AUTO - Ufficio
+APPLICATIVO INFORMATICO
+PASS AUTO
+ISAAC
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+Operativo
+MODALITA' ESECUZIONE CONTROLLO
+A campione
+
+
+075
+TITOLO
+Generazione report mensile montesconti
+DESCRIZIONE
+Il sistema genera automaticamente un report mensile riepilogativo delle ricariche effettuate, suddiviso per agenzia e tipologia. Il report viene inviato via e-mail al responsabile dell'ufficio e archiviato nel sistema documentale.
+ALTRO STRUMENTO
+-
+ESECUTORE
+AUTOMATICO
+APPLICATIVO INFORMATICO
+ISAAC
+FLEXCOMM
+
+080
+TITOLO
+Chiusura richiesta
+DESCRIZIONE
+Una volta effettuata la ricarica o deciso il diniego il ticket viene chiuso automaticamente con le informazioni in esso inserite così da informare l'intermediario in merito all'esito della sua richiesta.
+ALTRO STRUMENTO
+-
+ESECUTORE
+FOR AUTO / DANNI NON AUTO - Ufficio
+APPLICATIVO INFORMATICO
+ISAAC
+
+
+
+

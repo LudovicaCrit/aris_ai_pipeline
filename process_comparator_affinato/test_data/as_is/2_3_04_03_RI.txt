@@ -1,0 +1,199 @@
+convert /mnt/user-data/uploads/2_3_04_03_RI_Gestione_costi_spese_generali.doc as a Writer document -> /tmp/tmpbixkkoy4/2_3_04_03_RI_Gestione_costi_spese_generali.txt using filter : Text
+﻿Flusso di processo
+
+2.3.04.03.RI Gestione costi spese generali
+Macroprocesso
+
+2.RI PROCESSI DI BUSINESS
+Processo
+
+2.3.RI Gestione amministrativa immobiliare
+Sottoprocesso
+
+2.3.04.RI Fatture attive e passive
+Periodicità di esecuzione
+
+Ad evento
+Owner
+
+BUDGET - Ufficio
+App senza presidio IT
+
+
+Recovery Point Objective
+
+Fascia 0
+Recovery Time Objective
+
+24 ore
+
+
+
+Data ultimo aggiornamento
+
+Jul 2, 2025, 11:44:20 AM
+
+Svolto per Reale Mutua
+No
+
+Svolto per Italiana
+No
+
+Svolto per Blue Assistance
+No
+
+Svolto per Banca Reale
+No
+
+Svolto per Reale Immobili
+Si
+
+Svolto per Reale Seguros
+No
+
+Svolto per Reale Vida
+No
+
+Svolto per ITES
+No
+
+Svolto per Compagnia Extragruppo
+No
+
+Svolto per Reale Chile
+No
+
+Svolto per Reale Foundation
+No
+
+Svolto per BHC
+No
+
+Svolto per Reale International
+No
+
+Svolto per Reale Ites Esp
+No
+
+Svolto per Italnext
+No
+
+Svolto per Ydrogios
+No
+
+Svolto per Reale Immobili Esp
+No
+
+
+
+
+
+Dati trattati
+
+
+Riservatezza
+
+2
+Integrità
+
+2
+Disponibilità
+
+2
+Affidabilità
+
+2
+Privacy
+
+NON PERSONALI
+
+
+Codice
+Attività
+Attività
+Codice
+Controllo
+Controllo
+010
+TITOLO
+Ricezione fattura elettronica
+DESCRIZIONE
+La persona incaricata riceve la fattura elettronica via mail da parte del sistema di smistamento workflow.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+BUDGET - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+020
+TITOLO
+Analisi e compilazione stringa
+DESCRIZIONE
+La persona incaricata effettua una valutazione delle fatture ricevute e provvede a compilare le varie stringhe presenti sul file excel interno all'ufficio assegnando ad ogni fattura il relativo responsabile.
+ALTRO STRUMENTO
+File Excel
+ESECUTORE
+BUDGET - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+030
+TITOLO
+Contatto con owner/ fornitori
+DESCRIZIONE
+La persona incaricata richiede via mail all'owner di riferimento informazioni di dettaglio circa le fatture pervenute, in modo particolare i vari contratti stipulati e se le prestazioni sono state eseguite ed erogate correttamente.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+BUDGET - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+040
+TITOLO
+Verificare documentazione a supporto
+DESCRIZIONE
+La persona incaricata ricevuta la documentazione a supporto della fattura elettronica, effettua una verifica sugli importi corrisposti e sul servizio erogato. Se non sussistono incongruenze invia una mail all'Ufficio Amministrativo e in copia conoscenza al/alla relativo/a Dirigente ed all'owner di competenza.
+GESTIONE ANOMALIA
+Se vengono rilevate delle incongruenze, la persona incaricata richiede chiarimenti all'owner di competenza.
+ALTRO STRUMENTO
+E-mail
+TIPO
+Manuale
+SCOPO
+Ex ante
+PERIODICITA'
+Ad evento
+DESCRIZIONE EVIDENZA CONTROLLO
+-
+ESECUTORE
+BUDGET - Ufficio
+APPLICATIVO INFORMATICO
+-
+EFFICACIA DEL CONTROLLO
+Alta
+NATURA RISCHIO SOTTOSTANTE
+Operativo
+MODALITA' ESECUZIONE CONTROLLO
+Massivo
+
+050
+TITOLO
+Autorizzazione fattura
+DESCRIZIONE
+La persona incaricata invia mail con le fatture allegate all'Ufficio Amministrativo e in copia conoscenza al/alla Dirigente ed all'owner di competenza.
+ALTRO STRUMENTO
+E-mail
+ESECUTORE
+BUDGET - Ufficio
+APPLICATIVO INFORMATICO
+-
+
+
+
+
