@@ -19,13 +19,14 @@ Data: 17 febbraio 2026
 """
 
 import json
+import re
 import sys
 import os
 from dataclasses import dataclass, field
 from enum import Enum
 
 # Importa dal Resolver
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'aris_resolver'))
 from matching.exact import normalize_name, exact_match, containment_match
 from matching.fuzzy import fuzzy_match, is_strong_fuzzy
 
@@ -240,14 +241,28 @@ def compute_diff(word_entities, aris_entities: list[dict]) -> list[EntityDiff]:
             diffs.append(diff)
 
     # Entità in ARIS ma non nel Word → potenzialmente rimosse
+    # Filtro intelligente: il Word non contiene tutti gli oggetti del modello.
+    # Le process interface (riferimenti ad altri modelli, es. "2.7.1.01 Piano...")
+    # non appaiono mai nel Word tabellare del PO.
     for aris in aris_entities:
         if aris['guid'] not in matched_aris_guids:
+            # Filtra process interface (nomi che iniziano con codice processo)
+            name = aris['name']
+            is_process_interface = bool(re.match(r'^\d+\.\d+', name))
+
+            # Filtra oggetti di tipo "unknown" (non mappati)
+            is_unmapped = aris['entity_type'] == 'unknown'
+
+            if is_process_interface or is_unmapped:
+                # Non sono rimosse: il Word non le contiene per design
+                continue
+
             diff = EntityDiff(
                 diff_type=DiffType.REMOVED,
-                entity_name=aris['name'],
+                entity_name=name,
                 entity_type=aris['entity_type'],
                 aris_guid=aris['guid'],
-                aris_name=aris['name'],
+                aris_name=name,
                 aris_description=aris.get('description', ''),
                 aris_type=aris['type']
             )
