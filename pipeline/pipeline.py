@@ -65,6 +65,101 @@ def load_aris_model(model_json_file: str) -> tuple:
     return model_name, aris_objects, model_data
 
 
+def compare_connections(entities: list, model_data: dict,
+                        matches: list = None) -> list:
+    """
+    Confronta le connessioni 'carries out' (esecutore → attività)
+    tra il Word (to-be) e il modello ARIS (as-is).
+
+    Usa i GUID risolti dal matching (R3) per cercare le connessioni
+    nel modello ARIS, invece di confrontare per nome.
+
+    Restituisce una lista di risultati:
+    - OK: stesso esecutore in Word e ARIS
+    - CHANGED: esecutore diverso (con GUID di entrambi)
+    - NEW: attività senza GUID (non trovata dal Resolver)
+    """
+    model = model_data['items'][0]
+
+    # Mappa GUID → nome oggetto
+    guid_to_name = {}
+    for obj in model.get('modelobjects', []):
+        for attr in obj.get('attributes', []):
+            if attr.get('apiname') == 'AT_NAME':
+                guid_to_name[obj['guid']] = attr['value']
+
+    # Mappa attività GUID → esecutore GUID da ARIS (connessioni 'carries out')
+    # target_guid = attività, source_guid = esecutore
+    aris_exec_by_guid = {}
+    for conn in model.get('modelconnections', []):
+        if conn.get('typename') == 'carries out':
+            aris_exec_by_guid[conn['target_guid']] = conn['source_guid']
+
+    # Mappa nome entità Word → GUID (dal matching R3)
+    word_to_guid = {}
+    if matches:
+        for m in matches:
+            if m.aris_guid and m.word_entity.entity_type in ('activity', 'executor'):
+                word_to_guid[m.word_entity.name] = m.aris_guid
+
+    # Confronta
+    results = []
+    for entity in entities:
+        if entity.entity_type != 'activity' or not entity.executor:
+            continue
+
+        activity_guid = word_to_guid.get(entity.name)
+
+        if not activity_guid:
+            # Attività non trovata dal Resolver → nuova
+            results.append({
+                'status': 'NEW',
+                'activity': entity.name,
+                'code': entity.code,
+                'word_executor': entity.executor
+            })
+            continue
+
+        # Cerca connessione 'carries out' per GUID dell'attività
+        aris_exec_guid = aris_exec_by_guid.get(activity_guid)
+        if not aris_exec_guid:
+            # Attività esiste in ARIS ma senza connessione esecutore
+            results.append({
+                'status': 'NEW_CONNECTION',
+                'activity': entity.name,
+                'activity_guid': activity_guid,
+                'code': entity.code,
+                'word_executor': entity.executor
+            })
+            continue
+
+        aris_exec_name = guid_to_name.get(aris_exec_guid, '?')
+        word_exec_guid = word_to_guid.get(entity.executor)
+
+        # Confronta per GUID se disponibile, altrimenti per nome
+        if word_exec_guid and word_exec_guid == aris_exec_guid:
+            status = 'OK'
+        elif aris_exec_name == entity.executor:
+            status = 'OK'
+        else:
+            status = 'CHANGED'
+
+        result = {
+            'status': status,
+            'activity': entity.name,
+            'activity_guid': activity_guid,
+            'code': entity.code,
+            'word_executor': entity.executor,
+            'aris_executor': aris_exec_name,
+            'aris_executor_guid': aris_exec_guid
+        }
+        if word_exec_guid:
+            result['word_executor_guid'] = word_exec_guid
+        results.append(result)
+
+    return results
+
+
 def build_update_json(matches: list[ARISMatch], model_name: str,
                       aris_objects: list = None,
                       diff_summary: dict = None) -> dict:
@@ -207,7 +302,7 @@ def run_resolver(word_file: str, model_json_file: str, output_dir: str) -> dict:
         print(f"         - {etype}: {len(names)}")
 
     print(f"\n  [R2] Caricamento modello ARIS")
-    model_name, aris_objects, _ = load_aris_model(model_json_file)
+    model_name, aris_objects, model_data = load_aris_model(model_json_file)
     print(f"       Modello: {model_name}")
     print(f"       Oggetti ARIS unici: {len(aris_objects)}")
 
@@ -227,6 +322,30 @@ def run_resolver(word_file: str, model_json_file: str, output_dir: str) -> dict:
     with open(report_path, 'w', encoding='utf-8') as f:
         f.write(report_html)
     print(f"       HTML → {report_path}")
+
+    # --- Confronto connessioni ---
+    print(f"\n  [R6] Confronto connessioni (esecutore → attività)")
+    conn_results = compare_connections(entities, model_data, matches=matches)
+    if conn_results:
+        ok = len([c for c in conn_results if c['status'] == 'OK'])
+        changed = [c for c in conn_results if c['status'] == 'CHANGED']
+        new = len([c for c in conn_results if c['status'] == 'NEW'])
+        new_conn = len([c for c in conn_results if c['status'] == 'NEW_CONNECTION'])
+        print(f"       ✅ Invariate:      {ok}")
+        print(f"       🔄 Cambiate:       {len(changed)}")
+        print(f"       🆕 Attività nuove: {new}")
+        if new_conn:
+            print(f"       🔗 Nuove connessioni: {new_conn}")
+        for c in changed:
+            print(f"       ⚠ [{c['activity']}]")
+            print(f"         ARIS: {c['aris_executor']} ({c.get('aris_executor_guid','')[:12]}...)")
+            print(f"         Word: {c['word_executor']}")
+        output_json["connection_changes"] = conn_results
+        # Riscrivi JSON con connessioni
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(output_json, f, ensure_ascii=False, indent=2)
+    else:
+        print(f"       (nessuna connessione trovata nel modello)")
 
     return output_json
 
@@ -388,6 +507,16 @@ def main():
         print(f"    🔵 Modificate:  {ds['MODIFIED']}")
         print(f"    🟢 Nuove:       {ds['ADDED']}")
         print(f"    🔴 Rimosse:     {ds['REMOVED']}")
+
+    conn_changes = resolver_output.get("connection_changes", [])
+    if conn_changes:
+        c_ok = len([c for c in conn_changes if c['status'] == 'OK'])
+        c_changed = len([c for c in conn_changes if c['status'] == 'CHANGED'])
+        c_new = len([c for c in conn_changes if c['status'] == 'NEW'])
+        print(f"\n  Connessioni (esecutore → attività):")
+        print(f"    ✅ Invariate:   {c_ok}")
+        print(f"    🔄 Cambiate:    {c_changed}")
+        print(f"    🆕 Nuove:       {c_new}")
 
     print(f"\n  Output in: {output_dir}/")
     print()
