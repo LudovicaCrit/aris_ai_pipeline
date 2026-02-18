@@ -9,23 +9,57 @@ di confrontare le connessioni Word (to-be) con quelle ARIS (as-is).
 
 Supporta:
 - File .doc (RTF) tramite striprtf
+- File .doc (binario OLE2) tramite antiword
 - File .docx tramite python-docx
 """
 
 import re
+import subprocess
 from models import WordEntity
 
 
 def read_word_file(filepath: str) -> str:
-    """Legge un file Word e restituisce il testo."""
+    """
+    Legge un file Word e restituisce il testo.
+
+    Per i .doc prova prima striprtf (file RTF).
+    Se fallisce (file binario OLE2), usa antiword.
+    """
     if filepath.endswith('.doc'):
-        from striprtf.striprtf import rtf_to_text
-        with open(filepath, 'r', encoding='cp1252', errors='replace') as f:
-            return rtf_to_text(f.read())
+        # Prova prima come RTF
+        try:
+            from striprtf.striprtf import rtf_to_text
+            with open(filepath, 'r', encoding='cp1252', errors='replace') as f:
+                raw = f.read()
+            text = rtf_to_text(raw)
+            # Verifica che abbia estratto qualcosa di utile
+            if 'TITOLO' in text or 'DESCRIZIONE' in text:
+                return text
+        except Exception:
+            pass
+
+        # Fallback: antiword per .doc binari (OLE2)
+        try:
+            result = subprocess.run(
+                ['antiword', filepath],
+                capture_output=True, text=True, timeout=30
+            )
+            if result.returncode == 0:
+                return result.stdout
+        except (FileNotFoundError, subprocess.TimeoutExpired):
+            pass
+
+        raise ValueError(
+            f"Impossibile leggere {filepath}: "
+            "né striprtf né antiword hanno funzionato. "
+            "Installa antiword con: sudo apt install antiword"
+        )
+
     elif filepath.endswith('.docx'):
         import docx
         doc = docx.Document(filepath)
         return "\n".join(p.text for p in doc.paragraphs)
+
     else:
         raise ValueError(f"Formato non supportato: {filepath}")
 
@@ -35,7 +69,8 @@ def extract_entities(text: str) -> list[WordEntity]:
     Estrae entità dal testo del Word.
 
     Parsa la struttura tabellare dei Word di Reale Mutua:
-    - Righe con codice attività (es. '010|TITOLO...')
+    - Formato RTF (striprtf): '010|TITOLO...'
+    - Formato antiword: '010TITOLO...'
     - Campi ESECUTORE, APPLICATIVO INFORMATICO
 
     Ogni attività conserva il legame con il proprio esecutore e applicativo.
@@ -46,15 +81,22 @@ def extract_entities(text: str) -> list[WordEntity]:
     executors_seen = set()
     apps_seen = set()
 
-    # Split per blocchi attività
-    blocks = re.split(r'\n(\d{2,4})\|', text)
+    # Split per blocchi attività — sceglie la regex in base al formato:
+    # RTF (striprtf) usa pipe: \n010|TITOLO\n...
+    # Antiword usa bell char: 010\x07TITOLO\n...
+    if '\x07' in text:
+        # Formato antiword (binario .doc) — usa bell char come separatore
+        blocks = re.split(r'(\d{2,4})\|?[\x07]?(?=TITOLO)', text)
+    else:
+        # Formato RTF (striprtf) — usa pipe come separatore
+        blocks = re.split(r'\n(\d{2,4})\|', text)
 
     for i in range(1, len(blocks), 2):
         code = blocks[i]
         content = blocks[i + 1] if i + 1 < len(blocks) else ""
 
         # Estrai titolo attività
-        title_match = re.search(r'TITOLO\s*\n(.+?)(?:\nDESCRIZIONE|\n)', content)
+        title_match = re.search(r'TITOLO[\x07]?\s*\n(.+?)(?:\nDESCRIZIONE|\n)', content)
         if not title_match:
             continue
 
@@ -62,14 +104,14 @@ def extract_entities(text: str) -> list[WordEntity]:
 
         # Estrai descrizione
         desc_match = re.search(
-            r'DESCRIZIONE\s*\n(.+?)(?:\nALTRO STRUMENTO|\nGESTIONE ANOMALIA)',
+            r'DESCRIZIONE[\x07]?\s*\n(.+?)(?:\nALTRO STRUMENTO|\nGESTIONE ANOMALIA)',
             content, re.DOTALL
         )
         desc = desc_match.group(1).strip() if desc_match else None
 
         # Estrai esecutore (nome)
         executor_name = None
-        exec_match = re.search(r'ESECUTORE\s*\n(.+)', content)
+        exec_match = re.search(r'ESECUTORE[\x07]?\s*\n(.+)', content)
         if exec_match:
             executor_raw = exec_match.group(1).strip()
             if executor_raw and executor_raw != '-':
@@ -77,7 +119,7 @@ def extract_entities(text: str) -> list[WordEntity]:
 
         # Estrai applicativo (nome)
         app_name = None
-        app_match = re.search(r'APPLICATIVO INFORMATICO\s*\n(.+)', content)
+        app_match = re.search(r'APPLICATIVO INFORMATICO[\x07]?\s*\n(.+)', content)
         if app_match:
             app_raw = app_match.group(1).strip()
             if app_raw and app_raw != '-':
