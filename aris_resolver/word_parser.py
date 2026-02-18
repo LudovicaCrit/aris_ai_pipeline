@@ -58,7 +58,27 @@ def read_word_file(filepath: str) -> str:
     elif filepath.endswith('.docx'):
         import docx
         doc = docx.Document(filepath)
-        return "\n".join(p.text for p in doc.paragraphs)
+        # Estrai testo da paragraphs
+        text = "\n".join(p.text for p in doc.paragraphs)
+        # Se non contiene TITOLO, estrai dalle tabelle
+        # ricostruendo il formato atteso: \n010\nTITOLO\n...
+        if 'TITOLO' not in text:
+            parts = []
+            for table in doc.tables:
+                for row in table.rows:
+                    cells = [c.text.strip() for c in row.cells]
+                    # Formato ARIS: col 0 = codice attività, col 1 = contenuto
+                    #               col 2 = codice controllo, col 3 = contenuto controllo
+                    # Ricostruisci: codice + contenuto per attività e controlli
+                    if len(cells) >= 2:
+                        # Colonne 0-1: attività
+                        if cells[0] and cells[1] and 'TITOLO' in cells[1]:
+                            parts.append(f"\n{cells[0]}\x07TITOLO\n{cells[1].split('TITOLO', 1)[1].lstrip()}")
+                        # Colonne 2-3: controlli
+                        if len(cells) >= 4 and cells[2] and cells[3] and 'TITOLO' in cells[3]:
+                            parts.append(f"\n{cells[2]}\x07TITOLO\n{cells[3].split('TITOLO', 1)[1].lstrip()}")
+            text = "\n".join(parts)
+        return text
 
     else:
         raise ValueError(f"Formato non supportato: {filepath}")
