@@ -16,6 +16,12 @@ class WordEntity:
     description: Optional[str] = None
     raw_text: Optional[str] = None
 
+    # Relazioni: preservano il legame tra attività e i suoi esecutori/applicativi.
+    # Popolate solo per entity_type='activity'.
+    # Contengono i NOMI (non i GUID) — il Resolver risolverà i GUID dopo.
+    executor: Optional[str] = None
+    application: Optional[str] = None
+
 
 @dataclass
 class ARISMatch:
