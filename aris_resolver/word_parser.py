@@ -104,12 +104,16 @@ def extract_entities(text: str) -> list[WordEntity]:
     # Split per blocchi attività — sceglie la regex in base al formato:
     # RTF (striprtf) usa pipe: \n010|TITOLO\n...
     # Antiword usa bell char: 010\x07TITOLO\n...
+    # docx/antiword pulito: 010TITOLO\n... (nessun separatore)
     if '\x07' in text:
         # Formato antiword (binario .doc) — usa bell char come separatore
         blocks = re.split(r'(\d{2,4})\|?[\x07]?(?=TITOLO)', text)
-    else:
+    elif '|' in text and re.search(r'\d{2,4}\|', text):
         # Formato RTF (striprtf) — usa pipe come separatore
         blocks = re.split(r'\n(\d{2,4})\|', text)
+    else:
+        # Formato docx o antiword pulito — codice attaccato a TITOLO
+        blocks = re.split(r'(\d{2,4})(?=TITOLO)', text)
 
     for i in range(1, len(blocks), 2):
         code = blocks[i]

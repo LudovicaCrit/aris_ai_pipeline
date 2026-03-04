@@ -1,5 +1,5 @@
 """
-ARIS AI Pipeline — Orchestratore End-to-End v0.2
+ARIS AI Pipeline — Orchestratore End-to-End v0.3
 ==================================================
 Orchestra i due agenti indipendenti:
     1. ProcedureCheck: Word → Report (per il management)
@@ -9,18 +9,24 @@ I due agenti lavorano sullo stesso Word.
 L'XML/JSON ARIS va SOLO al Resolver.
 Se un agente fallisce, l'altro continua.
 
+NOVITÀ v0.3:
+- Accetta AUTOMATICAMENTE sia JSON (API REST) che XML (export AML)
+  come sorgente as-is. Detecta il formato dal file.
+- Quando l'input è XML, le connessioni vengono dall'XML stesso
+  (più ricche di quelle nel JSON REST).
+
 Uso:
-    # Solo Resolver (default, come v0.1)
-    python3 pipeline.py <file_word> <file_model_json>
+    # Solo Resolver (default) — JSON o XML, auto-detect
+    python3 pipeline.py <file_word> <file_aris>
 
     # Resolver + ProcedureCheck (con Word as-is per confronto)
-    python3 pipeline.py <file_word> <file_model_json> --as-is <file_word_asis>
+    python3 pipeline.py <file_word> <file_aris> --as-is <file_word_asis>
 
     # Resolver + Diff Engine (Scenario 3: solo to-be, niente track changes)
-    python3 pipeline.py <file_word> <file_model_json> --scenario3
+    python3 pipeline.py <file_word> <file_aris> --scenario3
 
 Autore: Ludovica Ignatia Di Cianni — IMC Group
-Data: 17 febbraio 2026
+Data: 18 febbraio 2026
 """
 
 import sys
@@ -43,8 +49,89 @@ from report import generate_html_report
 from models import ARISMatch
 
 
-def load_aris_model(model_json_file: str) -> tuple:
-    """Carica il modello ARIS e restituisce (model_name, aris_objects, model_data)."""
+# ============================================================
+# DETECT FORMATO INPUT (JSON o XML)
+# ============================================================
+
+def detect_format(filepath: str) -> str:
+    """
+    Determina se il file as-is è JSON (API REST) o XML (export AML).
+    1. Per estensione (.json/.xml/.aml)
+    2. Se ambiguo: sniffa i primi byte
+    """
+    ext = os.path.splitext(filepath)[1].lower()
+    if ext == '.json':
+        return 'json'
+    if ext in ('.xml', '.aml'):
+        return 'xml'
+
+    # Fallback: leggi l'inizio del file
+    with open(filepath, 'r', encoding='utf-8', errors='replace') as f:
+        head = f.read(500).strip()
+    if head.startswith('{') or head.startswith('['):
+        return 'json'
+    if head.startswith('<?xml') or '<AML' in head or '<ObjDef' in head:
+        return 'xml'
+
+    raise ValueError(
+        f"Formato non riconosciuto: '{filepath}'\n"
+        f"Deve essere .json (API REST) o .xml/.aml (export ARIS)."
+    )
+
+
+def load_aris_model_from_xml(filepath: str) -> tuple:
+    """
+    Carica il modello ARIS da un file XML/AML.
+    Usa xml_parser.parse_xml() che restituisce modelobjects e
+    modelconnections nello STESSO formato del JSON REST.
+
+    Returns: (model_name, aris_objects, model_data_compat)
+        model_data_compat ha la stessa struttura di un JSON REST
+        così compare_connections() e run_diff_engine() funzionano senza modifiche.
+    """
+    from xml_parser import parse_xml
+
+    parsed = parse_xml(filepath)
+    meta = parsed.get('metadata', {})
+
+    # Nome modello: dal database o dal nome file
+    model_name = meta.get('database', '')
+    if not model_name:
+        model_name = os.path.splitext(os.path.basename(filepath))[0]
+
+    objects = parsed['modelobjects']
+    connections = parsed.get('modelconnections', [])
+
+    # Deduplica oggetti per GUID
+    seen = set()
+    unique_objects = []
+    for obj in objects:
+        guid = obj.get('guid', '')
+        if guid and guid not in seen:
+            seen.add(guid)
+            unique_objects.append(obj)
+
+    # Costruisci un dict compatibile col formato JSON REST
+    # così load_aris_model() e compare_connections() funzionano identici
+    model_data_compat = {
+        'items': [{
+            'attributes': [{'apiname': 'AT_NAME', 'value': model_name}],
+            'modelobjects': unique_objects,
+            'modelconnections': connections,
+        }]
+    }
+
+    print(f"       Modello: {model_name}")
+    print(f"       Oggetti: {len(unique_objects)}")
+    print(f"       Connessioni: {len(connections)} (dall'XML)")
+    if meta.get('export_date'):
+        print(f"       Export: {meta['export_date']} {meta.get('export_time', '')}")
+
+    return model_name, unique_objects, model_data_compat
+
+
+def load_aris_model_from_json(model_json_file: str) -> tuple:
+    """Carica il modello ARIS da JSON (API REST) e restituisce (model_name, aris_objects, model_data)."""
     with open(model_json_file, 'r') as f:
         model_data = json.load(f)
 
@@ -63,6 +150,21 @@ def load_aris_model(model_json_file: str) -> tuple:
             aris_objects.append(obj)
 
     return model_name, aris_objects, model_data
+
+
+def load_aris_model(filepath: str) -> tuple:
+    """
+    Carica il modello ARIS, auto-detect formato (JSON o XML).
+    Returns: (model_name, aris_objects, model_data)
+
+    model_data ha sempre la stessa struttura indipendentemente
+    dal formato sorgente, così il resto del pipeline è agnostico.
+    """
+    fmt = detect_format(filepath)
+    if fmt == 'json':
+        return load_aris_model_from_json(filepath)
+    else:
+        return load_aris_model_from_xml(filepath)
 
 
 def compare_connections(entities: list, model_data: dict,
@@ -265,7 +367,7 @@ def build_update_json(matches: list[ARISMatch], model_name: str,
 
     output = {
         "metadata": {
-            "pipeline_version": "0.2",
+            "pipeline_version": "0.3",
             "timestamp": datetime.now().isoformat(),
             "model_name": model_name,
             "total_entities": len(matches),
@@ -302,9 +404,12 @@ def run_resolver(word_file: str, model_json_file: str, output_dir: str) -> dict:
         print(f"         - {etype}: {len(names)}")
 
     print(f"\n  [R2] Caricamento modello ARIS")
+    fmt = detect_format(model_json_file)
+    print(f"       Formato: {fmt.upper()}")
     model_name, aris_objects, model_data = load_aris_model(model_json_file)
-    print(f"       Modello: {model_name}")
-    print(f"       Oggetti ARIS unici: {len(aris_objects)}")
+    if fmt == 'json':
+        print(f"       Modello: {model_name}")
+        print(f"       Oggetti ARIS unici: {len(aris_objects)}")
 
     print(f"\n  [R3] Matching entità Word → ARIS")
     matches = resolve_all(entities, aris_objects)
@@ -421,10 +526,10 @@ def run_procedure_check(word_file: str, word_asis_file: str, output_dir: str) ->
 
 def main():
     parser = argparse.ArgumentParser(
-        description="ARIS AI Pipeline — Orchestratore v0.2"
+        description="ARIS AI Pipeline — Orchestratore v0.3 (JSON + XML auto-detect)"
     )
     parser.add_argument("word_file", help="Word del PO (to-be o track changes)")
-    parser.add_argument("model_json", help="JSON/XML del modello ARIS (as-is)")
+    parser.add_argument("model_file", help="JSON (API REST) o XML (export AML) del modello ARIS")
     parser.add_argument("--as-is", dest="word_asis",
                         help="Word as-is per ProcedureCheck (opzionale)")
     parser.add_argument("--scenario3", action="store_true",
@@ -433,7 +538,8 @@ def main():
     args = parser.parse_args()
 
     print("=" * 60)
-    print("  ARIS AI PIPELINE — v0.2")
+    print("  ARIS AI PIPELINE — v0.3")
+    print("  (JSON + XML auto-detect)")
     print("=" * 60)
 
     has_asis = args.word_asis is not None
@@ -446,7 +552,7 @@ def main():
         print(f"  Modalità: Word (track changes) → Resolver")
 
     print(f"  Word: {os.path.basename(args.word_file)}")
-    print(f"  ARIS: {os.path.basename(args.model_json)}")
+    print(f"  ARIS: {os.path.basename(args.model_file)}")
     if has_asis:
         print(f"  As-is: {os.path.basename(args.word_asis)}")
 
@@ -473,7 +579,7 @@ def main():
     diff_output = None
     if args.scenario3:
         try:
-            diff_output = run_diff_engine(args.word_file, args.model_json, output_dir)
+            diff_output = run_diff_engine(args.word_file, args.model_file, output_dir)
         except Exception as e:
             print(f"\n  ⚠ Diff Engine fallito: {e}")
 
@@ -483,7 +589,7 @@ def main():
     # Produce: JSON operazioni UPDATE/REVIEW
     # ═══════════════════════════════════════════════════
     try:
-        resolver_output = run_resolver(args.word_file, args.model_json, output_dir)
+        resolver_output = run_resolver(args.word_file, args.model_file, output_dir)
     except Exception as e:
         print(f"\n  ❌ Resolver fallito: {e}")
         sys.exit(1)
@@ -493,7 +599,7 @@ def main():
     # ═══════════════════════════════════════════════════
     meta = resolver_output["metadata"]
     print(f"\n{'=' * 60}")
-    print(f"  RIEPILOGO PIPELINE v0.2")
+    print(f"  RIEPILOGO PIPELINE v0.3")
     print(f"{'=' * 60}")
     print(f"  Entità totali:         {meta['total_entities']}")
     print(f"  GUID trovati, invariati: {meta['matched_unchanged']}")
